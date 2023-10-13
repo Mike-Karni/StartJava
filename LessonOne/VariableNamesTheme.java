@@ -143,8 +143,8 @@ public class VariableNamesTheme {
         System.out.println("\n35.Он активный по жизни человек = " + active + ".");
 
         //Новый
-        boolean new = false;
-        System.out.println("\n36.Телефон в ломбарде новый = " + new + ".");
+        boolean isNew = false;
+        System.out.println("\n36.Телефон в ломбарде новый = " + isNew + ".");
 
         // Электронная почта действительная?
         boolean emailAvailable = true;
