@@ -1,186 +1,186 @@
 public class VariableNamesTheme {
     public static void main(String[] args) {
-        // 1. Разные переменные.
+        System.out.println("1.Разные переменные.");
         // Цифра.
         int digit = 10;
-        System.out.println("\n1.Цифра = " + digit + ".");
+        System.out.println("\nЦифра = " + digit + ".");
 
         // Сумма чисел.
         int sumNumbers = 100;
-        System.out.println("\n2.Сумма чисел = " + sumNumbers + ".");
+        System.out.println("\nСумма чисел = " + sumNumbers + ".");
 
         // Произведение чисел.
         int multDigits = 51;
-        System.out.println("\n3.Произведение чисел = " + multDigits + ".");
+        System.out.println("\nПроизведение чисел = " + multDigits + ".");
 
         // Максимальное число.
         int maxNumber = 666;
-        System.out.println("\n4.Максимальное число = " + maxNumber + ".");
+        System.out.println("\nМаксимальное число = " + maxNumber + ".");
 
         // Количество десятков.
-        int decadeQuantity = 15;
-        System.out.println("\n5.Количество десятков = " + decadeQuantity + ".");
+        int countTens = 15;
+        System.out.println("\nКоличество десятков = " + countTens + ".");
 
         // Вес собаки.
         int dogWeight = 20;
-        System.out.println("\n6.Вес собаки = " + dogWeight + ".");
+        System.out.println("\nВес собаки = " + dogWeight + ".");
 
         // Изначальное число
         int startNumber = 1;
-        System.out.println("\n7.Изначальное число = " + startNumber + ".");
+        System.out.println("\nИзначальное число = " + startNumber + ".");
 
         // Процент по вкладу.
         int percentProfit = 12;
-        System.out.println("\n8.Процент по вкладу = " + percentProfit + ".");
+        System.out.println("\nПроцент по вкладу = " + percentProfit + ".");
 
         // Переменная хранит символ &
-        char symbol = '&';
-        System.out.println("\n9.Переменная хранит символ " + symbol + ".");
+        char ampersand = '&';
+        System.out.println("\nПеременная хранит символ " + ampersand + ".");
 
         // Код ошибки.
         String codeError = "404Ukr";
-        System.out.println("\n10.Код ошибки = " + codeError + ".");
+        System.out.println("\nКод ошибки = " + codeError + ".");
 
         // Тип сообщения
         String messageType = "текстовый";
-        System.out.println("\n11.Тип сообщения " + messageType + ".");
+        System.out.println("\nТип сообщения " + messageType + ".");
 
         // Количество нулей.
-        int zeroQuantity = 3;
-        System.out.println("\n12.Количество нулей = " + zeroQuantity + ".");
+        int numberZeros = 3;
+        System.out.println("\nКоличество нулей = " + numberZeros + ".");
 
         // Уникальное число.
         int uniqueNumber = 12321;
-        System.out.println("\n13.Уникальное число = " + uniqueNumber + ".");
+        System.out.println("\nУникальное число = " + uniqueNumber + ".");
 
         // Случайное число.
         int randomNumber = 23490;
-        System.out.println("\n14.Случайное число = " + randomNumber + ".");
+        System.out.println("\nСлучайное число = " + randomNumber + ".");
 
         // Математическое выражение.
         String mathFormula = "E = m * c ^ 2";
-        System.out.println("\n15.Математическое выражение " + mathFormula + ".");
+        System.out.println("\nМатематическое выражение " + mathFormula + ".");
 
         // Выбор чего-либо.
-        String randonChoice = "покушать";
-        System.out.println("\n16.Я выбрал " + randonChoice + ".");
+        String randomChoice = "покушать";
+        System.out.println("\nЯ выбрал " + randomChoice + ".");
 
         // Количество очков(в игре).
-        int amountGameScores = 666;
-        System.out.println("\n17.Количество очков в игре = " + amountGameScores + ".");
+        int score = 666;
+        System.out.println("\nКоличество очков в игре = " + score + ".");
 
         // Максимальная длина строки.
         int maxLineLength = 20;
-        System.out.println("\n18.Максимальная для строки = " + maxLineLength + ".");
+        System.out.println("\nМаксимальная для строки = " + maxLineLength + ".");
 
         // Пункт меню.
-        double menuClause = 3.1d;
-        System.out.println("\n19.Пункт меню " + menuClause + ".");
+        double menuItem = 3.1d;
+        System.out.println("\nПункт меню " + menuItem + ".");
 
         // Стоимость кофе на вынос.
         int coffeeOutCost = 2;
-        System.out.println("\n20.Стоимость кофе на вынос " + coffeeOutCost + " доллара.");
+        System.out.println("\nСтоимость кофе на вынос " + coffeeOutCost + " доллара.");
 
         // Дата начала(чего-либо).
         String startDate = "1 сентября 2023";
-        System.out.println("\n21.Дата начала обучения " + startDate + ".");
+        System.out.println("\nДата начала обучения " + startDate + ".");
 
         // Конец диапазона.
-        int rangeEnd = 10;
-        System.out.println("\n22.Конец диапазона = " + rangeEnd + ".");
+        int endRange = 10;
+        System.out.println("\nКонец диапазона = " + endRange + ".");
 
         // Полное имя работника месяца.
         String fullNameMonthEmployee = "Карин Михаил Александрович"; 
-        System.out.println("\n23.Полное имя работника месяца : " + fullNameMonthEmployee + ".");
+        System.out.println("\nПолное имя работника месяца : " + fullNameMonthEmployee + ".");
 
         // Заголовок электронной книги
-        String OnlineBookTitle = "Три мушкетёра";
-        System.out.println("\n24.Заголовок электронной книги : " + OnlineBookTitle + ".");
+        String ebookTitle = "Три мушкетёра";
+        System.out.println("\nЗаголовок электронной книги : " + ebookTitle + ".");
 
         // Размер.
         String size = "XL";
-        System.out.println("\n25.Размер = " + size + ".");
+        System.out.println("\nРазмер = " + size + ".");
 
         // Вместимость чего-либо.
         int capacity = 50;
-        System.out.println("\n26.Вместимость = " + capacity + ".");
+        System.out.println("\nВместимость = " + capacity + ".");
 
         // Счётчик.
-        int count = 4;
-        System.out.println("\n27.Счётчик = " + count + ".");
+        int counter = 4;
+        System.out.println("\nСчётчик = " + counter + ".");
 
         // Путь до файла.
         String filePath = "C:\\Users\\Mi\\Downloads";
-        System.out.println("\n28.Путь до файла : " + filePath + ".");
+        System.out.println("\nПуть до файла : " + filePath + ".");
 
         // Количество чисел в каждой строке.
-        int eachLineNumbersQuantity = 76;
-        System.out.println("\n29.Количество чисел в каждой строке = " + eachLineNumbersQuantity);
+        int countNumbersPerLine = 76;
+        System.out.println("\nКоличество чисел в каждой строке = " + countNumbersPerLine);
         
-        //Boolean-переменные.
+        System.out.println("\n2.Boolean-переменные.");
         //Сотни равны?
         boolean equal = true;
-        System.out.println("\n30.У этих чисел сотни равны = " + equal + ".");
+        System.out.println("\nУ этих чисел сотни равны = " + equal + ".");
 
         //Компьютер включен?
         boolean pcOn = false;
-        System.out.println("\n31.Компьютер ночью включён = " + pcOn + ".");
+        System.out.println("\nКомпьютер ночью включён = " + pcOn + ".");
 
         //Есть равные числа?
         boolean sameDigits = true;
-        System.out.println("\n32.У этих чисел есть равные числа = " + sameDigits + ".");
+        System.out.println("\nУ этих чисел есть равные числа = " + sameDigits + ".");
 
         // (Что-либо) создано?
         boolean created = true;
-        System.out.println("\n33.Создано отличное приложение = " + created + ".");
+        System.out.println("\nСоздано отличное приложение = " + created + ".");
 
         //(Что-либо) пусто?
         boolean empty = true;
-        System.out.println("\n34. Контейнер пуст = " + empty + ".");
+        System.out.println("\n Контейнер пуст = " + empty + ".");
 
         // (Что-либо) активный?
         boolean active = true;
-        System.out.println("\n35.Он активный по жизни человек = " + active + ".");
+        System.out.println("\nОн активный по жизни человек = " + active + ".");
 
         //Новый
         boolean isNew = false;
-        System.out.println("\n36.Телефон в ломбарде новый = " + isNew + ".");
+        System.out.println("\nТелефон в ломбарде новый = " + isNew + ".");
 
         // Электронная почта действительная?
-        boolean emailAvailable = true;
-        System.out.println("\n37.Его почта действительна = " + emailAvailable + ".");
+        boolean emailValid = true;
+        System.out.println("\nЕго почта действительна = " + emailValid + ".");
 
         //Имеются уникальные строки?
-        boolean uniqueLines = true;
-        System.out.println("\n38.В тексте есть уникальные строки = " + uniqueLines + ".");
+        boolean isUniqueLines = true;
+        System.out.println("\nВ тексте есть уникальные строки = " + isUniqueLines + ".");
 
-        // 3.Аббревиатуры.
+        System.out.println("\n3.Аббревиатуры.");
         //старый universally unique identifier
-        String oldUui = "123eis";
-        System.out.println("\n39.Ваш элемент программы имеет старый идентификатор " + oldUui + ".");
+        String oldUuid = "123eis";
+        System.out.println("\nВаш элемент программы имеет старый идентификатор " + oldUuid + ".");
 
         // производитель оперативной памяти.
         String ramManufacturer = "Transcend";
-        System.out.println("\n40.Мне нравится оператива от производителя " + ramManufacturer + ".");
+        System.out.println("\nМне нравится оператива от производителя " + ramManufacturer + ".");
 
         // Ёмкость жесткого диска.
         int hdd = 128;
-        System.out.println("\n41.Емкость жесткого диска " + hdd + " гигабайт.");
+        System.out.println("\nЕмкость жесткого диска " + hdd + " гигабайт.");
 
         // Протокол передачи гипертекста.
         String http = "https://dzen.ru/";
-        System.out.println("\n42.Новости здесь " + http);
+        System.out.println("\nНовости здесь " + http);
 
         // сокращенный uniform resource locator
         String shortUrl = "yandex.ru";
-        System.out.println("\n43.Сокращённый адрес Яндекса : " + shortUrl);
+        System.out.println("\nСокращённый адрес Яндекса : " + shortUrl);
 
         //новый идентификатор клиента
-        String newIdClient = "692-888-431";
-        System.out.println("\n44.Новый идентификатор клиента : " + newIdClient);
+        String newClientId = "692-888-431";
+        System.out.println("\nНовый идентификатор клиента : " + newClientId);
 
         //кодировка american standard code for information interchange
-        char ascii = 'A';
-        System.out.println("\n45.Символ " + ascii + " имеет 66 место в таблице ASCII.");
+        String encoding  = "ASCII";
+        System.out.println("\nКоличество символов в кодировке " + encoding + " равно 128.");
     }
 }
