@@ -18,5 +18,21 @@ public class VariableTheme {
         System.out.println("Первый символ названия компьютера " + cpuName);
         System.out.println("Компьютер новый : " + isNew);
 
+        System.out.println("\n2.Расчёт стоимости товара со скидкой.");
+        double penCost = 100d;
+        double bookCost = 200d;
+        double discount = 0.11d;
+        double sumGoods = penCost + bookCost;
+        double sumDiscount = sumGoods * discount;
+        double totalCost = sumGoods - sumDiscount;
+        System.out.println("Cтоимость товаров без скидки : " + sumGoods + " рублей.");
+        System.out.println("Сумма скидки : " + sumDiscount + " рубля.");
+        System.out.println("Общая стоимость товаров со скидкой : " + totalCost + " рублей.");
+
+        System.out.println("\n3.Вывод слова JAVA");
+        System.out.println("   J    a  v     v  a");
+        System.out.println("   J   a a  v   v  a a");
+        System.out.println("J  J  aaaaa  V V  aaaaa");
+        System.out.println(" JJ  a     a  V  a     a");
     }
 }
