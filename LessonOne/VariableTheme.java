@@ -34,5 +34,25 @@ public class VariableTheme {
         System.out.println("   J   a a  v   v  a a");
         System.out.println("J  J  aaaaa  V V  aaaaa");
         System.out.println(" JJ  a     a  V  a     a");
+
+        System.out.println("5.Вывод min и max значений целых числовых типов");
+        byte byteMax = 127;
+        System.out.println("Максимальное значение  byte числа равно " + byteMax + ".");
+        byteMax++;
+        System.out.println("Значение инкремента максимального значения byte равно " + byteMax++);
+        short shortMax = 32_767;
+        System.out.println("Максимальное значение  short числа равно " + shortMax + ".");
+        shortMax++;
+        System.out.println("Значение инкремента максимального значения short равно " + shortMax++);
+        int intMax = 2_147_483_647;
+        System.out.println("Максимальное значение int числа равно " + intMax);
+        intMax++;
+        System.out.println("Значение инкремента максимального значения int равно " + intMax++);
+        long longMax = 9_223_372_036_854_775_807l;
+        System.out.println("Максимальное значение long числа равно " + longMax);
+        longMax++;
+        System.out.println("Значение инкремента максимального значения long равно " + longMax++);
+     
+
     }
 }
