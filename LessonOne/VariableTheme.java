@@ -35,7 +35,7 @@ public class VariableTheme {
         System.out.println("J  J  aaaaa  V V  aaaaa");
         System.out.println(" JJ  a     a  V  a     a");
 
-        System.out.println("5.Вывод min и max значений целых числовых типов");
+        System.out.println("\n4.Вывод min и max значений целых числовых типов");
         byte byteMax = 127;
         System.out.println("Максимальное значение  byte числа равно " + byteMax + ".");
         byteMax++;
@@ -53,6 +53,30 @@ public class VariableTheme {
         longMax++;
         System.out.println("Значение инкремента максимального значения long равно " + longMax++);
      
+        System.out.println("\n5.Перестановка значений переменных");
+        System.out.println("Смена значений двух переменных с использованием третьей переменной.");
+        int num1 = 2;
+        int num2 = 5;
+        System.out.println("Исходное значение первой переменной = " + num1 + ",исходное значение " +
+                "второй переменной = " + num2 + ".");
+        int temp = num1;
+        int shiftNum1 = num2;
+        int shiftNum2 = temp;
+        System.out.println("Значение первой переменной после перестановки = " + shiftNum1);
+        System.out.println("Значение второй переменной после перестановки = " + shiftNum2);
+        System.out.println("Смена значений переменных с использованием арифметических операций");
+        int shiftNum4 = num1 + num2;// n1
+        int shiftNum3 = shiftNum4 - num1; //n2
+        System.out.println("Значение первой переменной после перестановки = " + shiftNum3);
+        shiftNum4 = shiftNum4 - shiftNum3;//n1
+        System.out.println("Значение второй переменной после перестановки = " + shiftNum4);
+        System.out.println("Перестановка значений с использование побитовой операции");
+        num1 ^= num2; 
+        num2 = num1 ^ num2;
+        num1 ^= num2;
+        System.out.println("Значение первой переменной после перестановки = " + num1);
+        System.out.println("Значение второй переменной после перестановки = " + num2);
+
 
     }
 }
