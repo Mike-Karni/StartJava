@@ -77,6 +77,30 @@ public class VariableTheme {
         System.out.println("Значение первой переменной после перестановки = " + num1);
         System.out.println("Значение второй переменной после перестановки = " + num2);
 
+        System.out.println("\n6.Вывод символов и их кодов");
+        char codeChar1 = 36;
+        char codeChar2 = 42;
+        char codeChar3 = 64;
+        char codeChar4 = 124;
+        char codeChar5 = 126;
+        System.out.println((int) codeChar1 + " = " + codeChar1);
+        System.out.println((int) codeChar2 + " = " + codeChar2);
+        System.out.println((int) codeChar3 + " = " + codeChar3);
+        System.out.println((int) codeChar4 + " = " + codeChar4);
+        System.out.println((int) codeChar5 + " = " + codeChar5);
 
+        System.out.println("\n7.Вывод в консоль ASCII-арт Дюка");
+        char slash = 47;
+        char backSlash = 92;
+        System.out.println("    " + slash + backSlash + "    ");
+        System.out.println("   " + slash + "  " + backSlash + "   ");
+        char underscore = 95;
+        char leftParenthesis = 40;
+        char rightParenthesis = 41;
+        System.out.println("  " + slash + underscore + leftParenthesis + " " + rightParenthesis + 
+                backSlash + "   ");
+        System.out.println(" " + slash + "      " + backSlash + "  ");
+        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + 
+                backSlash + underscore + underscore + backSlash + " ");
     }
 }
