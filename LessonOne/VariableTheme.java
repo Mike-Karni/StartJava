@@ -1,6 +1,6 @@
 public class VariableTheme {
     public static void main(String[] args) {
-        System.out.println("\n1.Вывод характеристик компьютера.");
+        System.out.println("\n1.Вывод характеристик компьютера.\n");
         byte coreQuantity = 8;
         short windowsVersion = 11;
         int ram = 16;
@@ -18,7 +18,7 @@ public class VariableTheme {
         System.out.println("Первый символ названия компьютера " + cpuName);
         System.out.println("Компьютер новый : " + isNew);
 
-        System.out.println("\n2.Расчёт стоимости товара со скидкой.");
+        System.out.println("\n2.Расчёт стоимости товара со скидкой.\n");
         double penCost = 100d;
         double bookCost = 200d;
         double discount = 0.11d;
@@ -29,13 +29,13 @@ public class VariableTheme {
         System.out.println("Сумма скидки : " + sumDiscount + " рубля.");
         System.out.println("Общая стоимость товаров со скидкой : " + totalCost + " рублей.");
 
-        System.out.println("\n3.Вывод слова JAVA");
+        System.out.println("\n3.Вывод слова JAVA\n");
         System.out.println("   J    a  v     v  a");
         System.out.println("   J   a a  v   v  a a");
         System.out.println("J  J  aaaaa  V V  aaaaa");
         System.out.println(" JJ  a     a  V  a     a");
 
-        System.out.println("\n4.Вывод min и max значений целых числовых типов");
+        System.out.println("\n4.Вывод min и max значений целых числовых типов\n");
         byte byteMax = 127;
         System.out.println("Максимальное значение  byte числа равно " + byteMax + ".");
         byteMax++;
@@ -53,7 +53,7 @@ public class VariableTheme {
         longMax++;
         System.out.println("Значение инкремента максимального значения long равно " + longMax++);
      
-        System.out.println("\n5.Перестановка значений переменных");
+        System.out.println("\n5.Перестановка значений переменных\n");
         System.out.println("Смена значений двух переменных с использованием третьей переменной.");
         int num1 = 2;
         int num2 = 5;
@@ -77,7 +77,7 @@ public class VariableTheme {
         System.out.println("Значение первой переменной после перестановки = " + num1);
         System.out.println("Значение второй переменной после перестановки = " + num2);
 
-        System.out.println("\n6.Вывод символов и их кодов");
+        System.out.println("\n6.Вывод символов и их кодов\n");
         char codeChar1 = 36;
         char codeChar2 = 42;
         char codeChar3 = 64;
@@ -89,7 +89,7 @@ public class VariableTheme {
         System.out.println((int) codeChar4 + " = " + codeChar4);
         System.out.println((int) codeChar5 + " = " + codeChar5);
 
-        System.out.println("\n7.Вывод в консоль ASCII-арт Дюка");
+        System.out.println("\n7.Вывод в консоль ASCII-арт Дюка\n");
         char slash = 47;
         char backSlash = 92;
         System.out.println("    " + slash + backSlash + "    ");
@@ -102,5 +102,21 @@ public class VariableTheme {
         System.out.println(" " + slash + "      " + backSlash + "  ");
         System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + 
                 backSlash + underscore + underscore + backSlash + " ");
+
+        System.out.println("\n8.Вывод количества сотен, десятков и единиц числа\n");
+        int number = 123;
+        int hundreds = number / 100;
+        System.out.println("Число " + number + " содержит " + hundreds + " сотню.");
+        int tens = (number / 10) % 10;
+        System.out.println("Число " + number + " содердит " + tens + " десятка.");
+        int ones = number % 10;
+        System.out.println("Число " + number + " содердит " + ones + " единицы.");
+
+        System.out.println("\n9.Вывод времени\n");
+        int amountSeconds = 86399;
+        int amountHours = amountSeconds / 3600;
+        int amountMinutes = (amountSeconds / 60) % 60;
+        int amountSeconds1 = amountSeconds % 60;
+        System.out.println(amountHours + ":" + amountMinutes + ":" + amountSeconds1);
     }
 }
