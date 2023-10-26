@@ -66,24 +66,43 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Число " + num3 + " равно нулю");
         }*/
-/*
-        System.out.println("\nПоиск одинаковых цифр в числах.\n");
+
+        System.out.println("\n4.Поиск одинаковых цифр в числах.\n");
         int num4 = 123;
-        int num5 = 126;
+        int num5 = 456;
         int hundreds4 = num4 / 100;
         int tens4 = (num4 / 10) % 10;
         int ones4 = num4 % 10;
         int hundreds5 = num5 / 100;
         int tens5 = (num5 / 10) % 10;
         int ones5 = num5 % 10;
-        if (hundreds4 != hundreds5 && tens4 != tens5 && ones4 != ones5) {
-            System.out.println("В этих числах нет равных цифр, стоящих в одинаковых разрядах");
-        } else if (hundreds4 == hundreds5) {
-            System.out.println("Числа " + num4 + " и " + num5 + " имеют равные цифры в третьем " +
-                    "разряде");
-        } else if (tens4 == tens5) {
-            System.out.println("Числа " + num4 + " и " + num5 + " имеют равные цифры во втором " +
-                    "разряде");
-        }*/
+        if ((hundreds4 != hundreds5) && (tens4 != tens5) && (ones4 != ones5)) {
+            System.out.println("В этих числах нет равных цифр, стоящих в одинаковых разрядах.");
+        } else if ((hundreds4 == hundreds5) && (tens4 == tens5) && (ones4 != ones5)) {
+            System.out.println("В числах " + num4 + " и " + num5 + " есть одинаковая цифра " +
+                    " в третьем разряде = " + hundreds4 + "; есть одинаковая цифрв во втором " + 
+                    "разряде " + tens4 + ".");
+        } else if ((hundreds4 == hundreds5) && (tens4 != tens5) && (ones4 == ones5)) {
+            System.out.println("В числах " + num4 + " и " + num5 + " есть одинаковая цифра " + 
+                    "в третьем разряде = " + hundreds4 + "; есть одинаковая цифра " + 
+                    "в первом разряде = " + ones4 + ".");
+        } else if ((hundreds4 == hundreds5) && (tens4 != tens5) && (ones4 != ones5)) {
+            System.out.println("В числах " + num4 + " и " + num5 + " есть одинаковая цифра " + 
+                    "в третьем разряде = " + hundreds4 + ".");
+        } else if ((hundreds4 != hundreds5) && (tens4 == tens5) && (ones4 == ones5)) {
+            System.out.println("В числах " + num4 + " и " + num5 + " есть одинаковая цифра " + 
+                    "во втором разряде = " + tens4 + "; есть одинаковая цифра в первом разряде " + 
+                    "= " + ones4 + ".");
+        } else if ((hundreds4 != hundreds5) && (tens4 == tens5) && (ones4 != ones5)) {
+            System.out.println("В числах " + num4 + " и " + num5 + " есть одинаковая цифра во " + 
+                    "втором разряде = " + tens4 + ".");
+        } else if ((hundreds4 != hundreds5) && (tens4 != tens5) && (ones4 == ones5)) {
+            System.out.println("В числах " + num4 + " и " + num5 + " есть одинаковая цифра в " + 
+                    "первом разряде = " + ones4 + ".");
+        } else {
+            System.out.println("Числа равны.");
+        }
+
+        System.out.println("\n5.Определение символа по его коду.\n");
     }
 }
