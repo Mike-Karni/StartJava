@@ -104,5 +104,17 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n5.Определение символа по его коду.\n");
+        char symbol = '\u0057';
+        System.out.println(symbol);
+        System.out.println((int) symbol);
+        if ((int) symbol > 47 && (int) symbol < 59) {
+            System.out.println("Символ " + symbol + " является цифрой"); 
+        } else if ((int) symbol > 96 && (int) symbol < 123) {
+            System.out.println("Символ " + symbol + " является маленькой буквой");
+        } else if ((int) symbol > 64 && (int) symbol < 91) {
+            System.out.println("Символ " + symbol + " является большой буквой");
+        } else {
+            System.out.println("Символ " + symbol + " является не буквой и не цифрой");
+        }
     }
 }
