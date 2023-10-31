@@ -40,7 +40,7 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n3.Проверка числа.\n");
-        int num3 = 1;
+        int num3 = -5;
         if (num3 != 0 ) {
             if (num3 % 2 == 0 && num3 > 0) {
                 System.out.println("Число " + num3 + " является чётным  и положительным.");
@@ -54,22 +54,10 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Число " + num3 + " равно нулю");
         }
-        /*
-        if (num3 % 2 == 0 && num3 > 0) {
-            System.out.println("Число " + num3 + " чётное  и положительное");
-        } else if (num3 % 2 == 1 && num3 > 0) {
-            System.out.println("Число " + num3 + " нечётное и положительное");
-        } else if (num3 % 2 == 0 && num3 < 0) {
-            System.out.println("Число " + num3 + " чётное и отрицательное");
-        } else if ( - (num3 % 2) == 1 && num3 < 0) {
-            System.out.println("Число " + num3 + " нечётное и отрицательное");
-        } else {
-            System.out.println("Число " + num3 + " равно нулю");
-        }*/
 
         System.out.println("\n4.Поиск одинаковых цифр в числах.\n");
         int num4 = 123;
-        int num5 = 456;
+        int num5 = 223;
         int hundreds4 = num4 / 100;
         int tens4 = (num4 / 10) % 10;
         int ones4 = num4 % 10;
@@ -105,8 +93,6 @@ public class IfElseStatementTheme {
 
         System.out.println("\n5.Определение символа по его коду.\n");
         char symbol = '\u0057';
-        System.out.println(symbol);
-        System.out.println((int) symbol);
         if ((int) symbol > 47 && (int) symbol < 59) {
             System.out.println("Символ " + symbol + " является цифрой"); 
         } else if ((int) symbol > 96 && (int) symbol < 123) {
@@ -118,8 +104,8 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n6.Подсчет суммы вклада и начисленных банком %.\n");
-        double startMoney = 400000d;
-        double sumMoney  = 400000d;
+        double startMoney = 301000d;
+        double sumMoney  = 301000d;
         double sumProfit = 0;
         if (startMoney < 100000) {
             sumProfit = startMoney * 0.05;
@@ -175,7 +161,7 @@ public class IfElseStatementTheme {
         System.out.println("Средний процент по предметам = " + averagePercent);
 
         System.out.println("\n8.Расчёт годовой прибыли.\n");
-        int monthlySales = 14000;
+        int monthlySales = 13000;
         int rentCost = 5000;
         int productionCost = 9000;
         int annualProfit = (monthlySales - rentCost - productionCost) * 12;
