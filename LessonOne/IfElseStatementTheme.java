@@ -174,5 +174,17 @@ public class IfElseStatementTheme {
         double averagePercent = (double) (historyPercent + programmingPercent) / 2;
         System.out.println("Средний процент по предметам = " + averagePercent);
 
+        System.out.println("\n8.Расчёт годовой прибыли.\n");
+        int monthlySales = 14000;
+        int rentCost = 5000;
+        int productionCost = 9000;
+        int annualProfit = (monthlySales - rentCost - productionCost) * 12;
+        if (annualProfit < 0) {
+            System.out.println("Прибыль за год: " + annualProfit + " руб.");
+        } else if (annualProfit > 0) {
+            System.out.println("Прибыль за год: +" + annualProfit + " руб.");
+        } else {
+            System.out.println("Прибыль за год: 0 руб.");
+        }
     }
 }
