@@ -137,5 +137,42 @@ public class IfElseStatementTheme {
             System.out.println("Сумма вклада = " + startMoney + "; Сумма начисленных процентов = " +
                     + sumProfit + "; Итоговая сумма = " + sumMoney + ".");
         }
+
+        System.out.println("\n7.Определение оценки по предметам.\n");
+        int historyPercent = 59;
+        int programmingPercent = 92;
+        int historyMark = 0;
+        int programmingMark = 0;
+        if (historyPercent <= 60) {
+            historyMark = 2;
+            System.out.println("История = " + historyMark);
+        } else if (historyPercent > 60 && historyPercent <= 73) {
+            historyMark = 3;
+            System.out.println("История = " + historyMark);
+        } else if (historyPercent > 73 && historyPercent <= 91) {
+            historyMark = 4;
+            System.out.println("История = " + historyMark);
+        } else if (historyPercent > 91 && historyPercent <= 100) {
+            historyMark = 5;
+            System.out.println("История = " + historyMark);
+        }
+        if (programmingPercent <= 60) {
+            programmingMark = 2;
+            System.out.println("Программирование = " + programmingMark);
+        } else if (programmingPercent > 60 && programmingPercent <= 73) {
+            programmingMark = 3;
+            System.out.println("Программирование = " + programmingMark);
+        } else if (programmingPercent > 73 && programmingPercent <= 91) {
+            programmingMark = 4;
+            System.out.println("Программирование = " + programmingMark);
+        } else if (programmingPercent > 91 && programmingPercent <= 100) {
+            programmingMark = 5;
+            System.out.println("Программирование = " + programmingMark);
+        }
+        int averageMark = (historyMark + programmingMark) / 2;
+        System.out.println("Cредний балл оценок по предметам = " + averageMark);
+        double averagePercent = (double) (historyPercent + programmingPercent) / 2;
+        System.out.println("Средний процент по предметам = " + averagePercent);
+
     }
 }
