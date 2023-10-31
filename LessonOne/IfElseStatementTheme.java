@@ -116,5 +116,26 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Символ " + symbol + " является не буквой и не цифрой");
         }
+
+        System.out.println("\n6.Подсчет суммы вклада и начисленных банком %.\n");
+        double startMoney = 400000d;
+        double sumMoney  = 400000d;
+        double sumProfit = 0;
+        if (startMoney < 100000) {
+            sumProfit = startMoney * 0.05;
+            sumMoney += sumProfit;
+            System.out.println("Сумма вклада = " + startMoney + "; Сумма начисленных процентов = " +
+                    + sumProfit + "; Итоговая сумма = " + sumMoney + ".");
+        } else if (startMoney >= 100000 && startMoney <= 300000) {
+            sumProfit = startMoney * 0.07;
+            sumMoney += sumProfit;
+            System.out.println("Сумма вклада = " + startMoney + "; Сумма начисленных процентов = " +
+                    + sumProfit + "; Итоговая сумма = " + sumMoney + ".");
+        } else if (startMoney > 300000) {
+            sumProfit = startMoney * 0.1;
+            sumMoney += sumProfit;
+            System.out.println("Сумма вклада = " + startMoney + "; Сумма начисленных процентов = " +
+                    + sumProfit + "; Итоговая сумма = " + sumMoney + ".");
+        }
     }
 }
