@@ -22,12 +22,12 @@ public class VariableTheme {
         double penCost = 100d;
         double bookCost = 200d;
         double discount = 0.11d;
-        double sumGoods = penCost + bookCost;
-        double sumDiscount = sumGoods * discount;
-        double totalCost = sumGoods - sumDiscount;
-        System.out.println("Cтоимость товаров без скидки : " + sumGoods + " рублей.");
-        System.out.println("Сумма скидки : " + sumDiscount + " рубля.");
-        System.out.println("Общая стоимость товаров со скидкой : " + totalCost + " рублей.");
+        double sumCost = penCost + bookCost;
+        double discountCost = sumCost * discount;
+        double discountPrice = sumCost - discountCost;//
+        System.out.println("Cтоимость товаров без скидки : " + sumCost + " рублей.");
+        System.out.println("Сумма скидки : " + discountCost + " рубля.");
+        System.out.println("Общая стоимость товаров со скидкой : " + discountPrice + " рублей.");
 
         System.out.println("\n3.Вывод слова JAVA\n");
         System.out.println("   J    a  v     v  a");
@@ -60,17 +60,21 @@ public class VariableTheme {
         System.out.println("Исходное значение первой переменной = " + num1 + ",исходное значение " +
                 "второй переменной = " + num2 + ".");
         int temp = num1;
-        int shiftNum1 = num2;
-        int shiftNum2 = temp;
-        System.out.println("Значение первой переменной после перестановки = " + shiftNum1);
-        System.out.println("Значение второй переменной после перестановки = " + shiftNum2);
+        num1 = num2;
+        num2 = temp;
+        System.out.println("Значение первой переменной после перестановки = " + num1);
+        System.out.println("Значение второй переменной после перестановки = " + num2);
         System.out.println("Смена значений переменных с использованием арифметических операций");
-        int shiftNum4 = num1 + num2;// n1
-        int shiftNum3 = shiftNum4 - num1; //n2
-        System.out.println("Значение первой переменной после перестановки = " + shiftNum3);
-        shiftNum4 = shiftNum4 - shiftNum3;//n1
-        System.out.println("Значение второй переменной после перестановки = " + shiftNum4);
+        System.out.println("Исходное значение переменной num1 равно " + num1);
+        System.out.println("Исходное значение переменной num2 равно " + num2);
+        num1 += num2;
+        num2 = num1 - num2;
+        num1 -= num2;
+        System.out.println("Значение первой переменной после перестановки = " + num1);
+        System.out.println("Значение второй переменной после перестановки = " + num2);
         System.out.println("Перестановка значений с использование побитовой операции");
+        System.out.println("Исходное значение переменной num1 равно " + num1);
+        System.out.println("Исходное значение переменной num2 равно " + num2);
         num1 ^= num2; 
         num2 = num1 ^ num2;
         num1 ^= num2;
@@ -78,45 +82,45 @@ public class VariableTheme {
         System.out.println("Значение второй переменной после перестановки = " + num2);
 
         System.out.println("\n6.Вывод символов и их кодов\n");
-        char codeChar1 = 36;
-        char codeChar2 = 42;
-        char codeChar3 = 64;
-        char codeChar4 = 124;
-        char codeChar5 = 126;
-        System.out.println((int) codeChar1 + " = " + codeChar1);
-        System.out.println((int) codeChar2 + " = " + codeChar2);
-        System.out.println((int) codeChar3 + " = " + codeChar3);
-        System.out.println((int) codeChar4 + " = " + codeChar4);
-        System.out.println((int) codeChar5 + " = " + codeChar5);
+        char dollar = '$';
+        char asterisk = '*';
+        char atSign = '@';
+        char verticalBar = '|';
+        char tidle = '~';
+        System.out.println((int) dollar + " = " + dollar);
+        System.out.println((int) asterisk + " = " + asterisk);
+        System.out.println((int) atSign + " = " + atSign);
+        System.out.println((int) verticalBar + " = " + verticalBar);
+        System.out.println((int) tidle + " = " + tidle);
 
         System.out.println("\n7.Вывод в консоль ASCII-арт Дюка\n");
-        char slash = 47;
-        char backSlash = 92;
-        System.out.println("    " + slash + backSlash + "    ");
-        System.out.println("   " + slash + "  " + backSlash + "   ");
-        char underscore = 95;
-        char leftParenthesis = 40;
-        char rightParenthesis = 41;
+        char slash = '/';
+        char backSlash = '\\';
+        char underscore = '_';
+        char leftParenthesis = '(';
+        char rightParenthesis = ')';
+        System.out.println("    " + slash + backSlash);
+        System.out.println("   " + slash + "  " + backSlash);
         System.out.println("  " + slash + underscore + leftParenthesis + " " + rightParenthesis + 
-                backSlash + "   ");
-        System.out.println(" " + slash + "      " + backSlash + "  ");
+                backSlash);
+        System.out.println(" " + slash + "      " + backSlash);
         System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + 
-                backSlash + underscore + underscore + backSlash + " ");
+                backSlash + underscore + underscore + backSlash);
 
         System.out.println("\n8.Вывод количества сотен, десятков и единиц числа\n");
-        int number = 123;
-        int hundreds = number / 100;
-        System.out.println("Число " + number + " содержит " + hundreds + " сотню.");
-        int tens = (number / 10) % 10;
-        System.out.println("Число " + number + " содердит " + tens + " десятка.");
-        int ones = number % 10;
-        System.out.println("Число " + number + " содердит " + ones + " единицы.");
+        int num3 = 123;
+        int hundreds = num3 / 100;
+        int tens = (num3 / 10) % 10;
+        int ones = num3 % 10;
+        System.out.println("Число " + num3 + " содержит " + hundreds + " сотню.");
+        System.out.println("Число " + num3 + " содержит " + tens + " десятка.");
+        System.out.println("Число " + num3 + " содержит " + ones + " единицы.");
 
         System.out.println("\n9.Вывод времени\n");
-        int amountSeconds = 86399;
-        int amountHours = amountSeconds / 3600;
-        int amountMinutes = (amountSeconds / 60) % 60;
-        int amountSeconds1 = amountSeconds % 60;
-        System.out.println(amountHours + ":" + amountMinutes + ":" + amountSeconds1);
+        int ss = 86399;
+        int hh = ss / 3600;
+        int mm = (ss / 60) % 60;
+        int ss1 = ss % 60;
+        System.out.println(hh + ":" + mm + ":" + ss1);
     }
 }
