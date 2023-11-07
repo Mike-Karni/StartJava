@@ -45,24 +45,28 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n3.Проверка числа.");
-        int num3 = -5;
+        int num3 = 0;
         if (num3 != 0 ) {
-            if (num3 % 2 == 0 && num3 > 0) {
-                System.out.println("Число " + num3 + " является чётным  и положительным.");
-            } else if (num3 % 2 == 1 && num3 > 0) {
-                System.out.println("Число " + num3 + " является нечётным и положительным.");
-            } else if(num3 % 2 == 0 && num3 < 0) {
-                System.out.println("Число " + num3 + " является чётным и отрицательным.");
-            } else if(num3 % 2 == -1 && num3 < 0) {
-                System.out.println("Число " + num3 + " является нечётным и отрицательным.");
+            if (num3 > 0) {
+                if (num3 % 2 == 1) {
+                    System.out.println("Число " + num3 + " положительное и нечетное");
+                } else {
+                    System.out.println("Число " + num3 + " положительное и чётное");
+                }
+            } else if (num3 < 0) {
+                if (num3 % 2 == 0) {
+                    System.out.println("Число " + num3 + " отрицательное и чётное");
+                } else {
+                    System.out.println("Число " + num3 + " отрицательное и нечётное");
+                }
             }
         } else {
             System.out.println("Число равно нулю");
         }
 
         System.out.println("\n4.Поиск одинаковых цифр в числах.");
-        int num4 = 123;
-        int num5 = 333;
+        int num4 = 183;
+        int num5 = 425;
         int hundreds4 = num4 / 100;
         int tens4 = (num4 / 10) % 10;
         int ones4 = num4 % 10;
@@ -71,23 +75,15 @@ public class IfElseStatementTheme {
         int ones5 = num5 % 10;
         if ((hundreds4 != hundreds5) && (tens4 != tens5) && (ones4 != ones5)) {
             System.out.println("В этих числах нет равных цифр, стоящих в одинаковых разрядах.");
-        } else if ((hundreds4 == hundreds5) && (tens4 == tens5) && (ones4 != ones5)) {
-            System.out.println("Одинаковая цифра в третьем разряде = " + hundreds4 + 
-                    "; одинаковая цифра во втором разряде = " + tens4 + ".");
-        } else if ((hundreds4 == hundreds5) && (tens4 != tens5) && (ones4 == ones5)) {
-            System.out.println("Одинаковая цифра в третьем разряде = " + hundreds4 + 
-                    "; одинаковая цифра в первом разряде = " + ones4 + ".");
-        } else if ((hundreds4 == hundreds5) && (tens4 != tens5) && (ones4 != ones5)) {
-            System.out.println("Одинаковая цифра в третьем разряде = " + hundreds4 + ".");
-        } else if ((hundreds4 != hundreds5) && (tens4 == tens5) && (ones4 == ones5)) {
-            System.out.println("Одинаковая цифра во втором разряде = " + tens4 + 
-                    "; одинаковая цифра в первом разряде = " + ones4 + ".");
-        } else if ((hundreds4 != hundreds5) && (tens4 == tens5) && (ones4 != ones5)) {
-            System.out.println("Одинаковая цифра во втором разряде = " + tens4 + ".");
-        } else if ((hundreds4 != hundreds5) && (tens4 != tens5) && (ones4 == ones5)) {
-            System.out.println("Одинаковая цифра в первом разряде = " + ones4 + ".");
-        } else {
-            System.out.println("Числа равны.");
+        } 
+        if (hundreds4 == hundreds5) {
+            System.out.println("Одинаковая цифра " + hundreds4 + " в третьем разряде");
+        } 
+        if (tens4 == tens5) {
+            System.out.println("Одинаковая цифра " + tens4 + " во втором разряде");
+        } 
+        if (ones4 == ones5) {
+            System.out.println("Одинаковая цифра " + ones4 + " в первом разряде");
         }
 
         System.out.println("\n5.Определение символа по его коду.");
