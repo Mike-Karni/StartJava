@@ -45,9 +45,9 @@ public class IfElseStatementTheme {
         } 
 
         System.out.println("\n3.Проверка числа.");
-        int num3 = 0;
+        int num3 = -9;
         if (num3 != 0 ) {
-            if (num3 % 2 == -1) {
+            if (num3 % 2 == 1 || num3 % 2 == -1) {
                 if (num3 > 0) {
                     System.out.println("Число " + num3 + " положительное и нечетное");
                 } else {
@@ -62,26 +62,33 @@ public class IfElseStatementTheme {
             }
         } else {
             System.out.println("Число равно нулю");
-        } 
+        }
 
         System.out.println("\n4.Поиск одинаковых цифр в числах.");
-        int num4 = 183;
-        int num5 = 423;
+        int num4 = 324;
+        int num5 = 133;
         int hundreds4 = num4 / 100;
         int tens4 = (num4 / 10) % 10;
         int ones4 = num4 % 10;
         int hundreds5 = num5 / 100;
         int tens5 = (num5 / 10) % 10;
         int ones5 = num5 % 10;
-        if ((hundreds4 != hundreds5) && (tens4 != tens5) && (ones4 != ones5)) {
-            System.out.println("В этих числах нет равных цифр, стоящих в одинаковых разрядах.");
-        } else if (hundreds4 == hundreds5) {
+        if (hundreds4 != hundreds5) {
+            if (tens4 != tens5) {
+                if (ones4 != ones5) {
+                    System.out.println("В этих числах нет равных цифр в одинаковых разрядах");
+                }
+            }
+        }
+        if (hundreds4 == hundreds5) {
             System.out.println("Одинаковая цифра " + hundreds4 + " в третьем разряде");
-        } else if (tens4 == tens5) {
+        }
+        if (tens4 == tens5) {
             System.out.println("Одинаковая цифра " + tens4 + " во втором разряде");
-        } else if (ones4 == ones5) {
+        }
+        if (ones4 == ones5) {
             System.out.println("Одинаковая цифра " + ones4 + " в первом разряде");
-        } 
+        }
 
         System.out.println("\n5.Определение символа по его коду.");
         char symbol = 'X';
@@ -151,6 +158,6 @@ public class IfElseStatementTheme {
             }
         } else {
             System.out.println("Прибыль за год: 0 руб.");
-        }
+        } 
     }
 }
