@@ -96,7 +96,7 @@ public class IfElseStatementTheme {
         } 
 
         System.out.println("\n6.Подсчет суммы вклада и начисленных банком %.");
-        double startMoney = 50000d;
+        double startMoney = 100000d;
         double sumMoney  = startMoney;
         double sumProfit = 0;
         double percentDiscount = 0.05;
