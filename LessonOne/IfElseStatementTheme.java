@@ -45,75 +45,68 @@ public class IfElseStatementTheme {
         } 
 
         System.out.println("\n3.Проверка числа.");
-        int num3 = -9;
-        if (num3 != 0 ) {
-            if (num3 % 2 == 1 || num3 % 2 == -1) {
-                if (num3 > 0) {
-                    System.out.println("Число " + num3 + " положительное и нечетное");
-                } else {
-                    System.out.println("Число " + num3 + " отрицательное и нечётное");
-                }
-            } else if (num3 % 2 == 0) {
-                if (num3 < 0) {
-                    System.out.println("Число " + num3 + " отрицательное и чётное");
-                } else {
-                    System.out.println("Число " + num3 + " положительное и чётное");
-                }
-            }
+        int num3 = 0;
+        if (num3 == 0) {
+            System.out.println("Число равно " + num3);
         } else {
-            System.out.println("Число равно нулю");
+            System.out.print(num3 + " является ");
+            if(num3 > 0) {
+                System.out.print("положительным и "); 
+            } else {
+                System.out.print("отрицательным и ");
+            }
+            if(num3 % 2 == 0) {
+                System.out.println("чётным");
+            } else {
+                System.out.println("нечётным");
+            }
         }
 
         System.out.println("\n4.Поиск одинаковых цифр в числах.");
         int num4 = 324;
-        int num5 = 133;
+        int num5 = 324;
         int hundreds4 = num4 / 100;
         int tens4 = (num4 / 10) % 10;
         int ones4 = num4 % 10;
         int hundreds5 = num5 / 100;
         int tens5 = (num5 / 10) % 10;
         int ones5 = num5 % 10;
-        if (hundreds4 != hundreds5) {
-            if (tens4 != tens5) {
-                if (ones4 != ones5) {
-                    System.out.println("В этих числах нет равных цифр в одинаковых разрядах");
-                }
+        if (hundreds4 != hundreds5 &&  tens4 != tens5 && ones4 != ones5) {
+            System.out.println("В этих числах нет равных цифр в одинаковых разрядах");
+        } else {
+            if (hundreds4 == hundreds5) {
+                System.out.println("Одинаковая цифра " + hundreds4 + " в третьем разряде");
             }
-        }
-        if (hundreds4 == hundreds5) {
-            System.out.println("Одинаковая цифра " + hundreds4 + " в третьем разряде");
-        }
-        if (tens4 == tens5) {
-            System.out.println("Одинаковая цифра " + tens4 + " во втором разряде");
-        }
-        if (ones4 == ones5) {
-            System.out.println("Одинаковая цифра " + ones4 + " в первом разряде");
-        }
+            if (tens4 == tens5) {
+                System.out.println("Одинаковая цифра " + tens4 + " во втором разряде");
+            }
+            if (ones4 == ones5) {
+                System.out.println("Одинаковая цифра " + ones4 + " в первом разряде");
+            }
+        } 
 
         System.out.println("\n5.Определение символа по его коду.");
-        char symbol = 'X';
-        if (symbol > '/' && symbol < ':') {
-            System.out.println("Символ " + symbol + " является цифрой"); 
-        } else if (symbol > '`' && symbol < '{') {
+        char symbol = 'Z';
+        if (symbol >= '0' && symbol <= '9') {
+            System.out.println("Символ " + symbol + " является цифрой."); 
+        } else if (symbol >= 'a' && symbol <= 'z') {
             System.out.println("Символ " + symbol + " является маленькой буквой");
-        } else if (symbol > '@' && symbol < '[') {
+        } else if (symbol >= 'A' && symbol <= 'Z') {
             System.out.println("Символ " + symbol + " является большой буквой");
         } else {
             System.out.println("Символ " + symbol + " является не буквой и не цифрой");
-        } 
+        }
 
         System.out.println("\n6.Подсчет суммы вклада и начисленных банком %.");
-        double startMoney = 100000d;
-        double sumMoney  = startMoney;
-        double sumProfit = 0;
+        double startMoney = 310000d;
         double percentDiscount = 0.05;
         if (startMoney >= 100000 && startMoney <= 300000) {
             percentDiscount = 0.07;
         } else if (startMoney > 300000) {
             percentDiscount = 0.1;
         }
-        sumProfit = startMoney * percentDiscount;
-        sumMoney += sumProfit;
+        double sumProfit = startMoney * percentDiscount;
+        double sumMoney = startMoney + sumProfit;
         System.out.printf("Сумма вклада = " + startMoney + " Сумма начисленных процентов = %.1f", 
                 sumProfit);
         System.out.println(" Итоговая сумма = " + sumMoney + "."); 
@@ -140,24 +133,20 @@ public class IfElseStatementTheme {
             programmingMark = 5;
         }
         System.out.println("Программирование = " + programmingMark);
-        double averageMark = (historyMark + programmingMark) / 2;
+        double averageMark = (double) (historyMark + programmingMark) / 2;
         System.out.println("Cредний балл оценок по предметам = " + averageMark);
         double averagePercent = (double) (historyPercent + programmingPercent) / 2;
         System.out.println("Средний процент по предметам = " + averagePercent);
 
         System.out.println("\n8.Расчёт годовой прибыли.");
-        int monthlySales = 13000;
+        int monthlySales = 14000;
         int rentCost = 5000;
         int productionCost = 9000;
         int annualProfit = (monthlySales - rentCost - productionCost) * 12;
-        if (annualProfit < 0 || annualProfit > 0) {
-            if (annualProfit > 0) {
-                System.out.println("Прибыль за год: +" + annualProfit + " руб.");
-            } else {
-                System.out.println("Прибыль за год: " + annualProfit + " руб.");
-            }
+        if (annualProfit <= 0) {
+            System.out.println("Годовая прибыль = " + annualProfit);
         } else {
-            System.out.println("Прибыль за год: 0 руб.");
-        } 
+            System.out.println("Годовая прибыль = +" + annualProfit);
+        }
     }
 }
