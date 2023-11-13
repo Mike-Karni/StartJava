@@ -98,18 +98,18 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n6.Подсчет суммы вклада и начисленных банком %.");
-        double startMoney = 310000d;
-        double percentDiscount = 0.05;
+        double startMoney = 10000d;
+        double percentDiscount = 0.05d;
         if (startMoney >= 100000 && startMoney <= 300000) {
-            percentDiscount = 0.07;
+            percentDiscount = 0.07d;
         } else if (startMoney > 300000) {
-            percentDiscount = 0.1;
+            percentDiscount = 0.1d;
         }
         double sumProfit = startMoney * percentDiscount;
         double sumMoney = startMoney + sumProfit;
         System.out.printf("Сумма вклада = " + startMoney + " Сумма начисленных процентов = %.1f", 
                 sumProfit);
-        System.out.println(" Итоговая сумма = " + sumMoney + "."); 
+        System.out.println(" Итоговая сумма = " + sumMoney); 
 
         System.out.println("\n7.Определение оценки по предметам.");
         int historyPercent = 59;
