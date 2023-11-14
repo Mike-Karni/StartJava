@@ -71,7 +71,7 @@ public class IfElseStatementTheme {
         int hundreds5 = num5 / 100;
         int tens5 = (num5 / 10) % 10;
         int ones5 = num5 % 10;
-        if (hundreds4 != hundreds5 &&  tens4 != tens5 && ones4 != ones5) {
+        if (hundreds4 != hundreds5 && tens4 != tens5 && ones4 != ones5) {
             System.out.println("В этих числах нет равных цифр в одинаковых разрядах");
         } else {
             if (hundreds4 == hundreds5) {
@@ -98,18 +98,18 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n6.Подсчет суммы вклада и начисленных банком %.");
-        double startMoney = 10000d;
-        double percentDiscount = 0.05d;
+        double startMoney = 99000d;
+        double percentDiscount = 0.05;
         if (startMoney >= 100000 && startMoney <= 300000) {
-            percentDiscount = 0.07d;
+            percentDiscount = 0.07;
         } else if (startMoney > 300000) {
-            percentDiscount = 0.1d;
+            percentDiscount = 0.1;
         }
         double sumProfit = startMoney * percentDiscount;
         double sumMoney = startMoney + sumProfit;
-        System.out.printf("Сумма вклада = " + startMoney + " Сумма начисленных процентов = %.1f", 
-                sumProfit);
-        System.out.println(" Итоговая сумма = " + sumMoney); 
+        System.out.printf("Сумма вклада = " + startMoney + 
+                " Сумма начисленных процентов = %.1f",sumProfit);
+        System.out.println(" Итоговая сумма = " + sumMoney);
 
         System.out.println("\n7.Определение оценки по предметам.");
         int historyPercent = 59;
