@@ -21,22 +21,20 @@ public class CyclesTheme {
         int num1 = 10;
         int num2 = 5;
         int num3 = -1;
-        int max = 0;
-        int min = 0;
-        if (num1 > num2 && num1 > num3) {
-            max = num1;
-        } else if (num2 > num1 && num2 > num3) {
+        int max = num1;
+        int min = num3;
+        if (num2 > num1 && num2 > num3) {
             max = num2;
-        } else {
+        } else if (num3 > num2 && num3 > num1) {
             max = num3;
         }
         if (num1 > num2 && num2 < num3) {
             min = num2;
-        } else if (num2 > num1 && num1 < num3) {
-            min = num1;
-        } else {
+        } else if (num1 > num3 && num2 > num3) {
             min = num3;
         }
+        System.out.println(max);
+        System.out.println(min);
         for (int i = max - 1; i > min; i--) {
             System.out.print(i + " ");
         }
@@ -125,22 +123,20 @@ public class CyclesTheme {
 
         System.out.println("\n\n7.Отображение ASCII-символов");
         System.out.printf("%-11s%-11s%11s", "DECIMAL", "CHARACTER", "DESCRIPTION\n");
-        for(char i = 39; i < 48; i+=2) {
-            //System.out.printf("\n" + "  " + (int) i + "%12s%27s%n",i,Character.getName(i));
+        for(char i = 39; i < 48; i += 2) {
             System.out.printf("%-15s%-11s%-20s%n", (int) i, i, Character.getName(i));
         }
         for(char i = 98; i < 123; i += 2) {
-               System.out.printf("%-15s%-11s%-20s%n", (int) i, i, Character.getName(i));
+            System.out.printf("%-15s%-11s%-20s%n", (int) i, i, Character.getName(i));
         }
 
         System.out.println("\n8.Проверка, является ли число палиндромом.");
         int num6 = 1234321;
         int copyNum6 = num6;
         int reverseNum = 0;
-        while(num6 != 0) {
-            int digit1 = 0;
-            digit1 = num6 % 10;
-            reverseNum = reverseNum * 10 + digit1;
+        while(num6 > 0) {
+            int digit = num6 % 10;
+            reverseNum = reverseNum * 10 + digit;
             num6 /= 10;
         }
         if(reverseNum == copyNum6) {
@@ -153,17 +149,18 @@ public class CyclesTheme {
         int num7 = 123321;
         int copyNum7 = num7;
         int count3 = 0;
-        int digit2 = 0;
-        int halfDigitSum = 0;
+        int sumDigit = 0;
+        int sumHalfDigit = 0;
         while (count3 < 6) { 
-            digit2 += num7 % 10;
+            sumDigit += num7 % 10;
             num7 /= 10;
             if (count3 == 2) {
-                halfDigitSum = digit2;
+                sumHalfDigit = sumDigit;
             }
             count3++;
         }
-        if (2 * halfDigitSum == digit2) {
+        int check = sumDigit / sumHalfDigit;
+        if (check == 2) {
             System.out.println("Число " + copyNum7 + " является счастливым.");
         } else {
             System.out.println("Число " + copyNum7 + "  не является счастливым.");
