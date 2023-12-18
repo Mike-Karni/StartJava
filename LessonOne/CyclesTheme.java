@@ -30,11 +30,9 @@ public class CyclesTheme {
         }
         if (num1 > num2 && num2 < num3) {
             min = num2;
-        } else if (num1 > num3 && num2 > num3) {
-            min = num3;
+        } else if (num2 > num1 && num3 > num1) {
+            min = num1;
         }
-        System.out.println(max);
-        System.out.println(min);
         for (int i = max - 1; i > min; i--) {
             System.out.print(i + " ");
         }
@@ -69,9 +67,12 @@ public class CyclesTheme {
         int num5 = 3242592;
         int copyNum5 = num5;
         int countTwos = 0;
-        while (num5 % 2 == 0) {
-            countTwos++;
-            num5 /= 2;
+        while (num5 > 0) {
+            int digit = num5 % 10;
+            if (digit == 2) {
+                countTwos++;
+            }
+            num5 /= 10;
         }
         if (countTwos % 2 == 0) {
             System.out.println("В " + copyNum5 + " чётное количество двоек - " + countTwos);
@@ -80,13 +81,13 @@ public class CyclesTheme {
         }
 
         System.out.println("\n6.Отображение геометрических фигур");
-        int count1 = 0;
+        count = 0;
         for (int i = 1; i < 51; i++) {
-            if (count1 % 10 == 0) {
+            if (count % 10 == 0) {
                 System.out.println();
             }
             System.out.print("*");
-            count1++;
+            count++;
         }
         System.out.println("\n");
 
@@ -103,23 +104,23 @@ public class CyclesTheme {
             countSymbol = row;
         }
 
-        int count2 = 2;
+        count = 2;
         int index = 2;
-        int column1 = 9;
+        column = 9;
         do {
             System.out.print('$');
-            if (index == count2) {
-                if (count2 / 4 == 0) {
-                    count2++;
+            if (index == count) {
+                if (count / 4 == 0) {
+                    count++;
                 } else {
-                    count2--;
+                    count--;
                 }
                 System.out.println();
                 index = 1;
             }
             index++;
-            column1--;
-        } while (column1 != 0);
+            column--;
+        } while (column != 0);
 
         System.out.println("\n\n7.Отображение ASCII-символов");
         System.out.printf("%-11s%-11s%11s", "DECIMAL", "CHARACTER", "DESCRIPTION\n");
@@ -148,18 +149,18 @@ public class CyclesTheme {
         System.out.println("\n9.Проверка, является ли число счастливым");
         int num7 = 123321;
         int copyNum7 = num7;
-        int count3 = 0;
-        int sumDigit = 0;
-        int sumHalfDigit = 0;
-        while (count3 < 6) { 
-            sumDigit += num7 % 10;
+        count = 0;
+        int sumDigits = 0;
+        int sumHalfDigits = 0;
+        while (count < 6) { 
+            sumDigits += num7 % 10;
             num7 /= 10;
-            if (count3 == 2) {
-                sumHalfDigit = sumDigit;
+            if (count == 2) {
+                sumHalfDigits = sumDigits;
             }
-            count3++;
+            count++;
         }
-        int check = sumDigit / sumHalfDigit;
+        int check = sumDigits / sumHalfDigits;
         if (check == 2) {
             System.out.println("Число " + copyNum7 + " является счастливым.");
         } else {
