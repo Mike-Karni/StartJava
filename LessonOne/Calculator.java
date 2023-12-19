@@ -3,9 +3,9 @@ public class Calculator {
         System.out.println("Программа 'Калькулятор'.");
         int a = 5;
         int b = 2;
-        int copyB = b;
         int result = 1;
         char sign = '+';
+        int copyB = b;
         if (sign == '+') {
             result = a + b;
             System.out.println(a + " " + sign + " " + b + " = " + result);
