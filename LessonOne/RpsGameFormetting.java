@@ -20,7 +20,7 @@ public class RpsGameFormatting {
         for (int i = 0; i < 5; i++) {
             System.out.print(rock + "\r") ;
             Thread.sleep(100);
-            System.out.print(scissors + "\r" );
+            System.out.print(scissors + "\r");
             Thread.sleep(100);
             System.out.print(paper + "\r");
             Thread.sleep(100);
