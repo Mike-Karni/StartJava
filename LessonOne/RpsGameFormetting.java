@@ -17,6 +17,7 @@ public class RpsGameFormatting {
         } else if (position1 > 33) {
             sign1 = scissors;
         }
+
         for (int i = 0; i < 5; i++) {
             System.out.print(rock + "\r") ;
             Thread.sleep(100);
@@ -38,6 +39,7 @@ public class RpsGameFormatting {
             if (position2 > 33) {
             sign2 = scissors;
         }
+
         for (int i = 0; i < 5; i++) {
             System.out.print(rock + "\r");
             Thread.sleep(100);
@@ -47,14 +49,16 @@ public class RpsGameFormatting {
             Thread.sleep(100);
         }
         System.out.println(sign2);
+
         if (sign1.equals(sign2)) {
             System.out.println("Победила дружба!") ;
             return;
         }
         String winner = name2;
+
         if (sign1.equals(rock)) {
             if (sign2.equals(scissors)) {
-                    winner = name1;
+                winner = name1;
             }
         } else if (sign1.equals(scissors)) {
             if (sign2.equals(paper)) {
