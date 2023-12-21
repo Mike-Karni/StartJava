@@ -25,6 +25,7 @@ public class Calculator {
         } else {
             System.out.println("Вы ввели неправильный знак операции, исправьте ошибку и " + 
                     "перезапустите программу.");
+            return;
         }
         System.out.println(a + " " + sign + " " + b + " = " + result);
     }
