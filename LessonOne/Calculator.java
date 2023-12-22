@@ -4,7 +4,7 @@ public class Calculator {
         int a = 5;
         int b = 4;
         int result = 1;
-        char sign = '%';
+        char sign = '^';
         if (sign == '+') {
             result = a + b;
         } else if (sign == '-') {
@@ -14,12 +14,9 @@ public class Calculator {
         } else if (sign == '/') {
             result = a / b;
         } else if (sign == '^') {
-            int count = 0;
-            for (int i = b; b > 0; b--) {
+            for (int i = 0; i < b; i++) {
                 result *= a;
-                count++;
             }
-            b = count;
         } else if (sign == '%') {
             result = a % b;
         } else {
