@@ -19,29 +19,30 @@ public class Calculator {
     }
 
     public void setSign(char sign) {
-        switch(sign) {
-            case '+' :
-                this.sign = sign;
-                break;
-            case '-' :
-                this.sign = sign;
-                break;
-            case '*' :
-                this.sign = sign;
-                break;
-            case '/' :
-                this.sign = sign;
-                break;
-            case '%' :
-                this.sign = sign;
-                break;
-            case '^' :
-                this.sign = sign;
-                break;
-            default :
-                System.out.println("Введённая математическая операция не поддерживается.");
-                break;
-        }
+        this.sign = sign;
+        // switch(sign) {
+        //     case '+' :
+        //         this.sign = sign;
+        //         break;
+        //     case '-' :
+        //         this.sign = sign;
+        //         break;
+        //     case '*' :
+        //         this.sign = sign;
+        //         break;
+        //     case '/' :
+        //         this.sign = sign;
+        //         break;
+        //     case '%' :
+        //         this.sign = sign;
+        //         break;
+        //     case '^' :
+        //         this.sign = sign;
+        //         break;
+        //     default :
+        //         System.out.println("Введённая операция не поддерживается, перезапустите программу.");
+        //         break;
+        // }
     }
 
     public int getNum2() {
@@ -52,35 +53,34 @@ public class Calculator {
         this.num2 = num2;
     }
 
-    public int getSum(int num1, int num2) {
-        return num1 + num2;
-    }
-
-    public void setResult(int result) {
-        this.result = result;
-    }
-
-    public int getSubtract(int num1, int num2) {
-        return num1 - num2;
-    }
-
-    public int getMultiply(int num1, int num2) {
-        return num1 * num2;
-    }
-
-    public int getDivide(int num1, int num2) {
-        return num1 / num2;
-    }
-
-    public int getRestDivide(int num1, int num2) {
-        return num1 % num2;
-    }
-
-    public int getDegree(int num1, int num2) {
-        int result = 1;
-        for (int i = 0; i < num2; i++) {
-            result *= num1;
+    public int checkSign(int num1, int num2) {
+        switch(getSign()) {
+            case '+' : 
+                result = num1 + num2;
+                break;
+            case '-' :
+                result = num1 - num2;
+                break;
+            case '*' :
+                result = num1 * num2;
+                break;
+            case '/' :
+                result = num1 / num2;
+                break;
+            case '%' :
+                result = num1 % num2;
+                break;
+            case '^' :
+                result = 1;
+                for (int i = 0; i < num2; i++) {
+                    result *= num1;
+                }
+                break;
+            default : 
+                System.out.println("Неправильный знак математической операции.");
+                break;
         }
         return result;
     }
+
 }
