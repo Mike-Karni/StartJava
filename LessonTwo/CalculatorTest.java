@@ -15,25 +15,8 @@ public class CalculatorTest {
                 calculator.setSign(scanner.next().charAt(0));
                 System.out.print("Введите второе число : ");
                 calculator.setNum2(scanner.nextInt());
-                if (calculator.getSign() == '+') {
-                    System.out.println("Сумма двух чисел равна " + 
-                            + calculator.getSum(calculator.getNum1(), calculator.getNum2()));
-                } else if (calculator.getSign() == '-') {
-                    System.out.println("Разность двух чисел = " + 
-                            + calculator.getSubtract(calculator.getNum1(), calculator.getNum2()));
-                } else if (calculator.getSign() == '*') {
-                    System.out.println("Умножение двух чисел = " + 
-                            + calculator.getMultiply(calculator.getNum1(), calculator.getNum2()));
-                } else if (calculator.getSign() == '/') {
-                    System.out.println("Деление двух чисел = " + 
-                            + calculator.getDivide(calculator.getNum1(), calculator.getNum2()));
-                } else if (calculator.getSign() == '%') {
-                    System.out.println("Остаток от деления двух чисел = " + 
-                            + calculator.getRestDivide(calculator.getNum1(), calculator.getNum2()));
-                } else if (calculator.getSign() == '^') {
-                    System.out.println("Возведение в степень первого числа вторым = " + 
-                            + calculator.getDegree(calculator.getNum1(), calculator.getNum2()));
-                }
+                System.out.println("Результат вычисления = " + 
+                        + calculator.checkSign(calculator.getNum1(), calculator.getNum2()));
             } else if (text1.equals("no")) {
                 System.out.println("Закончили работу");
                 break;
