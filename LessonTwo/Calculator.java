@@ -20,29 +20,6 @@ public class Calculator {
 
     public void setSign(char sign) {
         this.sign = sign;
-        // switch(sign) {
-        //     case '+' :
-        //         this.sign = sign;
-        //         break;
-        //     case '-' :
-        //         this.sign = sign;
-        //         break;
-        //     case '*' :
-        //         this.sign = sign;
-        //         break;
-        //     case '/' :
-        //         this.sign = sign;
-        //         break;
-        //     case '%' :
-        //         this.sign = sign;
-        //         break;
-        //     case '^' :
-        //         this.sign = sign;
-        //         break;
-        //     default :
-        //         System.out.println("Введённая операция не поддерживается, перезапустите программу.");
-        //         break;
-        // }
     }
 
     public int getNum2() {
@@ -53,7 +30,7 @@ public class Calculator {
         this.num2 = num2;
     }
 
-    public int checkSign(int num1, int num2) {
+    public int calculation(int num1, int num2) {
         switch(getSign()) {
             case '+' : 
                 result = num1 + num2;
