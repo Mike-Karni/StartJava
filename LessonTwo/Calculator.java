@@ -4,7 +4,7 @@ public class Calculator {
     private int num1;
     private char sign;
     private int num2;
-    private int result;
+    int result;
 
     public int getNum1() {
         return num1;
@@ -26,29 +26,24 @@ public class Calculator {
         this.num2 = num2;
     }
 
-    public int calculate(int num1, int num2) {
+    public int calculate() {
         switch(sign) {
             case '+' : 
-                result = num1 + num2;
-                break;
+                return num1 + num2;
             case '-' :
-                result = num1 - num2;
-                break;
+                return num1 - num2;
             case '*' :
-                result = num1 * num2;
-                break;
+                return num1 * num2;
             case '/' :
-                result = num1 / num2;
-                break;
+                return num1 / num2;
             case '%' :
-                result = num1 % num2;
-                break;
+                return num1 % num2;
             case '^' :
                 result = 1;
                 for (int i = 0; i < num2; i++) {
                     result *= num1;
                 }
-                break;
+                return result;
             default : 
                 System.out.println("Неправильный знак математической операции.");
                 break;
