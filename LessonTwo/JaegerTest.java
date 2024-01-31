@@ -20,10 +20,13 @@ public class JaegerTest {
         System.out.println("Damage decreased Cherno Alpha's strength to " + 
                 jaeger1.loseStrength() + " points.");
         jaeger1.setArmor(15);
-        System.out.println("Added new quality armor " + jaeger1.getArmor()+ "\n");
+        System.out.println("Added new quality armor to " + jaeger1.getArmor()+ "\n");
+
         Jaeger jaeger2 = new Jaeger("Gipsy Danger", "Mark-3", "USA", 79.25f, 5100f, 8, 6);
+        System.out.println(jaeger2 + "\n");
+        jaeger2.setArmor(jaeger2.upgradeArmor());
+        System.out.println(jaeger2 + "\n");
+        jaeger2.setStrength(jaeger2.loseStrength());
         System.out.println(jaeger2);
-        
-        System.out.println("\nИмя второго егеря = " + jaeger2.getModelName());
     }
 }
