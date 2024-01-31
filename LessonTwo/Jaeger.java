@@ -91,13 +91,11 @@ public class Jaeger {
         this.strength = strength;
         this.armor = armor;
     }
+
     @Override
     public String toString() {
         return String.format("modelName: %s \nmark: %s \norigin: %s\nheight : %f\nweight : %f + "
             + "\nstrength : %d\narmor : %d",modelName, mark, origin, height, weight, 
             strength,armor);
     }
-
-
-
 }
