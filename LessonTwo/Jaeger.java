@@ -7,6 +7,17 @@ public class Jaeger {
     private int strength;
     private int armor;
 
+        public Jaeger(String modelName, String mark, String origin, float height, 
+                float weight, int strength, int armor) {
+            this.modelName = modelName;
+            this.mark = mark;
+            this.origin = origin;
+            this.height = height;
+            this.weight = weight;
+            this.strength = strength;
+            this.armor = armor;
+    }
+
     public String getModelName() {
         return modelName;
     }
@@ -71,31 +82,10 @@ public class Jaeger {
         return strength - 3;
     }
 
-    public Jaeger () {
-    modelName = "";
-    mark = "";
-    origin = "";
-    height = 0.0f;
-    weight = 0.0f;
-    strength = 0;
-    armor = 0;
-}
-
-    public Jaeger (String modelName, String mark, String origin, float height, float weight, 
-            int strength, int armor) {
-        this.modelName = modelName;
-        this.mark = mark;
-        this.origin = origin;
-        this.height = height;
-        this.weight = weight;
-        this.strength = strength;
-        this.armor = armor;
-    }
-
     @Override
     public String toString() {
         return String.format("modelName: %s \nmark: %s \norigin: %s\nheight : %f\nweight : %f + "
-            + "\nstrength : %d\narmor : %d",modelName, mark, origin, height, weight, 
+                + "\nstrength : %d\narmor : %d",modelName, mark, origin, height, weight, 
             strength,armor);
     }
 }
