@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Random;
 
 public class GuessNumberTest {
     public static void main(String[] args) {
@@ -12,6 +11,14 @@ public class GuessNumberTest {
         Player player2 = new Player(name2);
 
         GuessNumber guessNumber = new GuessNumber(player1, player2);
-        guessNumber.playGame();
+        System.out.println("Желаете продолжить игру? Введите [yes/no]");
+        String continuationGame = scanner.nextLine();
+        while(!"no".equals(continuationGame)) {
+            if("yes".equals(continuationGame)) {
+                guessNumber.start();
+            }
+        System.out.println("Желаете продолжить игру? Введите [yes/no]");
+        continuationGame = scanner.nextLine();
+        }
     }
 }
