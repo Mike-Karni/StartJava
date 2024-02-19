@@ -4,7 +4,7 @@ public class Calculator {
     private int num1;
     private char sign;
     private int num2;
-    int result;
+    //int result;
 
     public int getNum1() {
         return num1;
@@ -27,6 +27,7 @@ public class Calculator {
     }
 
     public int calculate() {
+        int result = 1;
         switch(sign) {
             case '+' : 
                 return num1 + num2;
@@ -39,7 +40,6 @@ public class Calculator {
             case '%' :
                 return num1 % num2;
             case '^' :
-                result = 1;
                 for (int i = 0; i < num2; i++) {
                     result *= num1;
                 }
