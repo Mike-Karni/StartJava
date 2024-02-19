@@ -4,7 +4,6 @@ public class Calculator {
     private int num1;
     private char sign;
     private int num2;
-    //int result;
 
     public int getNum1() {
         return num1;
