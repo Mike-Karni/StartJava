@@ -4,7 +4,7 @@ public class GuessNumber {
     private int guessNumber;
     private Player player1;
     private Player player2;
-    private String continueGame;
+    private String inputAnswer;
 
     public GuessNumber(Player player1, Player player2) {
         this.player1 = player1;
