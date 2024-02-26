@@ -1,3 +1,5 @@
+package src.com.startjava.lesson_1.base;
+
 public class VariableTheme {
     public static void main(String[] args) {
         System.out.println("\n1.Вывод характеристик компьютера.\n");
