@@ -1,4 +1,4 @@
-package src.com.startjava.lesson_2_3.pesron;
+package com.startjava.lesson_2_3.pesron;
 
 public class Person {
     String sex = "male";
