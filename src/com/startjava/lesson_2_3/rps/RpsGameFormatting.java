@@ -10,17 +10,15 @@ public class RpsGameFormatting {
         Scanner console = new Scanner(System.in);
         String name1 = inputName(console);
         String name2 = inputName(console);
-
-        // Ход первого игрока
         int position = generatePosition(name1, r);
         String sign1 = defineSign(position);
-        showSigns( sign1 );
-
-        // Ход второго игрока
+        // Ход первого игрока
+        showSigns(sign1);
         position = generatePosition(name2, r);
         String sign2 = defineSign(position);
+        // Ход второго игрока
         showSigns(sign2);
-
+        // Определение победителя
         defineWinner(name1, sign1, name2, sign2);
     }
 
@@ -42,8 +40,7 @@ public class RpsGameFormatting {
         String sign = ROCK;
         if (position > 66) {
             sign = PAPER;
-        }
-        else if (position > 33) {
+        } else if (position > 33) {
             sign = SCISSORS;
         }
         return sign;
@@ -66,11 +63,9 @@ public class RpsGameFormatting {
             System.out.println("\nПобедила дружба!");
         return;
         }
-
-    boolean isName1Equal = sign1.equals(ROCK) && sign2.equals(SCISSORS) || 
-            sign1.equals(SCISSORS) && sign2.equals(PAPER) || 
-            sign1.equals(PAPER) && sign2.equals(ROCK);
-
+        boolean isName1Equal = sign1.equals(ROCK) && sign2.equals(SCISSORS) || 
+                sign1.equals(SCISSORS) && sign2.equals(PAPER) || 
+                sign1.equals(PAPER) && sign2.equals(ROCK);
         if (isName1Equal) {
             System.out.println("\nПобедил - " + name1   );
         } else {
