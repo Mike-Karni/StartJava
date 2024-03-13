@@ -5,26 +5,30 @@ import java.util.Scanner;
 
 // Игра Камень-Ножницы-Бумага
 public class RpsGameFormatting {
+
+    private static final String ROCK = "R";
+    private static final String SCISSORS = "S";
+    private static final String PAPER = "P";
+
     public static void main(String[] args) throws InterruptedException {
         Random r = new Random();
         Scanner console = new Scanner(System.in);
         String name1 = inputName(console);
         String name2 = inputName(console);
+
+        // Ход первого игрока
         int position = generatePosition(name1, r);
         String sign1 = defineSign(position);
-        // Ход первого игрока
         showSigns(sign1);
+
+        // Ход второго игрока
         position = generatePosition(name2, r);
         String sign2 = defineSign(position);
-        // Ход второго игрока
         showSigns(sign2);
+
         // Определение победителя
         defineWinner(name1, sign1, name2, sign2);
     }
-
-    private static final String ROCK = "R";
-    private static final String SCISSORS = "S";
-    private static final String PAPER = "P";
 
     private static String inputName(Scanner console) {
         System.out.print("Введите имя игрока: ");
@@ -61,7 +65,7 @@ public class RpsGameFormatting {
     private static void defineWinner(String name1, String sign1, String name2, String sign2) {
         if (sign1.equals(sign2)) {
             System.out.println("\nПобедила дружба!");
-        return;
+            return;
         }
         boolean isName1Equal = sign1.equals(ROCK) && sign2.equals(SCISSORS) || 
                 sign1.equals(SCISSORS) && sign2.equals(PAPER) || 
