@@ -67,9 +67,11 @@ public class RpsGameFormatting {
             System.out.println("\nПобедила дружба!");
             return;
         }
+
         boolean isName1Equal = sign1.equals(ROCK) && sign2.equals(SCISSORS) || 
                 sign1.equals(SCISSORS) && sign2.equals(PAPER) || 
                 sign1.equals(PAPER) && sign2.equals(ROCK);
+
         if (isName1Equal) {
             System.out.println("\nПобедил - " + name1   );
         } else {
