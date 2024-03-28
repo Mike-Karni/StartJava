@@ -9,8 +9,7 @@ public class Jaeger {
     private int strength;
     private int armor;
 
-        public Jaeger(String modelName, String mark, String origin, float height, 
-                float weight, int strength, int armor) {
+        public Jaeger() {
         this.modelName = modelName;
         this.mark = mark;
         this.origin = origin;

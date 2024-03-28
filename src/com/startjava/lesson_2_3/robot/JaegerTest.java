@@ -24,7 +24,7 @@ public class JaegerTest {
         jaeger1.setArmor(15);
         System.out.println("Added new quality armor to " + jaeger1.getArmor()+ "\n");
 
-        Jaeger jaeger2 = new Jaeger("Gipsy Danger", "Mark-3", "USA", 79.25f, 5100f, 8, 6);
+        Jaeger jaeger2 = new Jaeger();
         System.out.println(jaeger2 + "\n");
         jaeger2.setArmor(jaeger2.upgradeArmor());
         System.out.println(jaeger2 + "\n");
