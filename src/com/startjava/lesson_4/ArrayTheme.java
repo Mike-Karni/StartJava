@@ -1,10 +1,7 @@
 package com.startjava.lesson_4;
 
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
 import java.util.Arrays;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 import java.util.Random;
@@ -17,14 +14,14 @@ public class ArrayTheme {
 //        System.out.println(Arrays.toString(numbers));
 //
 //        int len = numbers.length;
-//        for (int i = 0; i < len / 2; i++) {
+//        for (int i = 0; i <= len / 2; i++) {
 //            int temp = numbers[i];
-//            numbers[i] = numbers[len - 1 - i];
-//            numbers[len - 1 - i] = temp;
+//            numbers[i] = numbers[--len];
+//            numbers[len] = temp;
 //        }
 //        System.out.print("После реверса: ");
 //        System.out.println(Arrays.toString(numbers));
-
+//
 //        System.out.println("\n2.Вычисление факториала");
 //        int[] multipliers = new int[10];
 //        int len1 = multipliers.length;
@@ -36,22 +33,24 @@ public class ArrayTheme {
 //            factorial *= multipliers[i];
 //            System.out.print(multipliers[i] + ((i < len1 - 2) ? " * " : " = " + factorial));
 //        }
-
+//
 //        System.out.println("\n\n3.Удаление элемента из массива");
 //        double[] randomNumbers = new double[15];
-//        System.out.println("Исходный массив, заполненный пятнадцатью случайными числами в две строки");
+//        System.out.println("Значение до модификации");
 //        double middleIndexValue = 0;
 //        int len2 = randomNumbers.length;
 //        for(int i = 0; i < len2; i++) {
 //            randomNumbers[i] = Math.random();
 //            middleIndexValue = randomNumbers[len2 / 2];
+//        }
+//        for (int i = 0; i < len2; i++) {
 //            if (i == len2 / 2) {
 //                print("%.3f%n", randomNumbers[i]);
 //            } else {
 //                print("%.3f ", randomNumbers[i]);
 //            }
 //        }
-//        System.out.println("\nИзменённый массив, заполненный в две строки");
+//        System.out.println("\nЗначения после модификации");
 //        int count = 0;
 //        for (int i = 0; i < len2; i++) {
 //            if (randomNumbers[i] < middleIndexValue) {
@@ -64,88 +63,96 @@ public class ArrayTheme {
 //            }
 //        }
 //        System.out.println("\nКоличество обнулённых ячеек равно " + count);
-//
-//
+
 //        System.out.println("\n4.Вывод алфавита лесенкой");
 //        int len3 = 26;
-//        char[] letters = new char[len3];
+//        char[] alphabet = new char[len3];
 //        int i = 0;
 //        for (char ch = 'Z'; ch >= 'A'; ch--) {
-//            letters[i++] = ch;
+//            alphabet[i] = (char) ('A'+ i);
+//            i++;
 //        }
-//        String line = " ";
-//        for (i = 0; i < len3; i++) {
+//        StringBuilder line = new StringBuilder();
+//        for (i = len3 - 1; i >= 0; i--) {
 //            for (int j = 0; j <= 0; j++) {
-//                line += letters[i];
+//                line.append(alphabet[i]);
 //                System.out.println(line);
 //            }
-//            System.out.println();
 //        }
-
+//
 //        System.out.println("\n5.Заполнение массива уникальными цифрами");
+//
 //        int len4 = 30;
 //        int startInterval = 40;
 //        int endInterval = 100;
-//        int[] randomNumbers1 = new int[len4];
+//        int[] uniqueNumbers = new int[len4];
 //        for (int i = 0; i < len4; i++) {
-//            randomNumbers1[i] = (int) ((Math.random() * (endInterval - startInterval) + startInterval));
+//            uniqueNumbers[i] = (int) ((Math.random() * (endInterval - startInterval) + startInterval));
 //            for (int j  = 0; j < i; j++) {
-//                if (randomNumbers1[i] == randomNumbers1[j]) {
+//                if (uniqueNumbers[i] == uniqueNumbers[j]) {
+//                    uniqueNumbers[i] = (int) ((Math.random() * (endInterval - startInterval) + startInterval));
 //                    i--;
 //                    break;
 //                }
 //            }
 //        }
-//        Arrays.sort(randomNumbers1);
+//        Arrays.sort(uniqueNumbers);
 //        int count1 = 1;
 //        for (int i = 0; i < len4; i++) {
 //            if (count1 % 10 == 0) {
-//                System.out.println(randomNumbers1[i]);
+//                System.out.println(uniqueNumbers[i]);
 //            } else {
-//                System.out.print(randomNumbers1[i] + " ");
+//                System.out.print(uniqueNumbers[i] + " ");
 //            }
 //            count1++;
 //        }
-
+//
         System.out.println("\n6.Игра 'Виселица'");
-        String[] words = {/*"болт","сорт", "сПОрт", "Бой", "пчЕла", "ДАр", "успех", "ежовик", */"маска"};
-        String secretWord = words[(int) (Math.random() * words.length)].toUpperCase();
+        String[] words = {/*"болт","сорт", "сПОрт", "Бой", "пчЕла", "ДАр", "успех", "ежовик",*/ "маска"};
+        Random random = new Random();
+        String secretWord = words[random.nextInt(words.length)].toUpperCase();
         System.out.println("Секретное слово : " + secretWord);
+        String[] gallows = {"_______",
+                "|     |",
+                "|     @",
+                "|    /|\\",
+                "|    / \\"};
         char[] secretLetters = new char[secretWord.length()];
-        String[] hangMan = {"-----\n|\n|\n|\n|\n|\n|\n--------", "-----\n|   |\n|\n|\n|\n|\n________",
-                "-----\n|   |\n|   0\n|\n|\n|\n|\n________", "-----\n|   |\n|   0\n|  /|\\\n|\n|\n--------",
-                "-----\n|   |\n|   0\n|  /|\\\n|  / \\\n| GAME OVER!\n--------"};
-        for (int i = 0; i < secretLetters.length; i++) {
-            secretLetters[i] = '_';
-            System.out.print(secretLetters[i]);
+        Arrays.fill(secretLetters,'*');
+        for (char letter : secretLetters) {
+            System.out.print(letter);
         }
+        System.out.println();
         Scanner scanner = new Scanner(System.in);
-        int attempt = hangMan.length;
+        int attempt = gallows.length;
         while (attempt > 0 && !String.valueOf(secretLetters).equals(secretWord)) {
             System.out.println("\nСлово " + String.valueOf(secretLetters));
             System.out.println("\nВведите букву для угадывания");
             char guessLetter = scanner.nextLine().toUpperCase().charAt(0);
-
+            int countSameLetters = 0;
             for (int i = 0; i < secretWord.length(); i++) {
                 if (secretWord.charAt(i) == guessLetter) {
                     secretLetters[i] = guessLetter;
-                    if (attempt < hangMan.length) {
-                        attempt++;
-                        //System.out.println(hangMan[hangMan.length - attempt]);
+                    countSameLetters++;
+                    if (attempt < gallows.length) {
+                        attempt += countSameLetters;
+                        for(int j = 0; j <= gallows.length - attempt; j++ ) {
+                            System.out.println(gallows[j]);
+                        }
                     }
-                } /*else if (!secretWord.contains(String.valueOf(guessLetter))) {
-                    System.out.println(hangMan[hangMan.length - attempt]);
-                } */
+                }
             }
             if (!secretWord.contains(String.valueOf(guessLetter))) {
                 attempt--;
-                System.out.println(hangMan[hangMan.length - attempt - 1]);
+                for(int j = 0; j <= gallows.length - attempt - 1; j++ ) {
+                    System.out.println(gallows[j]);
+                }
             }
             System.out.println("Оставшееся количество попыток : " + attempt);
         }
         System.out.println("Загаданное слово " + secretWord);
     }
-    public static void print(String text, double number) {
+    /*public static void print(String text, double number) {
         System.out.printf(text, number);
-    }
+    }*/
 }
