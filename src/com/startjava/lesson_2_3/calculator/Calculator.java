@@ -27,8 +27,8 @@ public class Calculator {
         this.num2 = num2;
     }
 
-    public int calculate() {
-        int result = 1;
+    public double calculate() {
+        double result = 1;
         switch(sign) {
             case '+' : 
                 return num1 + num2;

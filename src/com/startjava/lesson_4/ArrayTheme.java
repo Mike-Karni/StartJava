@@ -151,8 +151,22 @@ public class ArrayTheme {
             System.out.println("Оставшееся количество попыток : " + attempt);
         }
         System.out.println("Загаданное слово " + secretWord);
+        String orderInfo = "1,огурцы,20.05;2,помидоры,123.45;3,зайцы,0.50";
+        System.out.println(getTotalOrderAmount(orderInfo));
     }
     /*public static void print(String text, double number) {
         System.out.printf(text, number);
     }*/
+    static double getTotalOrderAmount(String orderInfo) {
+        double totalAmount = 0d;
+        final String[] items = orderInfo.split(";");
+
+        for (String item : items) {
+            final String[] itemInfo = item.split(",");
+            totalAmount += Double.parseDouble(itemInfo[2]);
+        }
+
+        return totalAmount;
+    }
+
 }
