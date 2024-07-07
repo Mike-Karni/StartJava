@@ -1,5 +1,6 @@
 package com.startjava.lesson_2_3.calculator;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Calculator {
@@ -34,7 +35,6 @@ public class Calculator {
     public void setMath(String line) { this.line = line; }
 
     public String getMath() { return line; }
-
 
 //    public double calculate() {
 //        double result = 1;
@@ -88,4 +88,10 @@ public class Calculator {
         }
         return result;
     }
+     public void printResult(double result) {
+         DecimalFormat d = new DecimalFormat("#.###");
+         String[] digits = new String[d.format(result).length()];
+
+
+     }
 }
