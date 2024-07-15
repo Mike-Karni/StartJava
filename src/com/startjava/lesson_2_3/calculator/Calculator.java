@@ -1,5 +1,7 @@
 package com.startjava.lesson_2_3.calculator;
 
+import org.w3c.dom.ls.LSOutput;
+
 import static java.lang.Math.IEEEremainder;
 
 public class Calculator {
@@ -68,11 +70,13 @@ public class Calculator {
         }
     }
 
-    public boolean checkNan(String signs) {
-        double a = Double.parseDouble(signs);
-        if (Double.isNaN(a) != Double.isNaN(a)) {
-            System.out.println("Вы ввели неправильный знак");
-        }
-        return false;
+    public void checkNan(String[] signs) {
+        System.out.println(Double.parseDouble(signs[0]));
+    }
+
+
+    public static double squareRootOfNegativeNumber() {
+        double number = -1.0;
+        return Math.sqrt(number);
     }
 }
