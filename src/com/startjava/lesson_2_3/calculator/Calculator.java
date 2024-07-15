@@ -1,6 +1,6 @@
 package com.startjava.lesson_2_3.calculator;
 
-import org.w3c.dom.ls.LSOutput;
+import jdk.internal.math.FloatingDecimal;
 
 import static java.lang.Math.IEEEremainder;
 
@@ -36,10 +36,10 @@ public class Calculator {
 
     public double calculate(String line) {
         String[] symbols = line.split(" ", 0);
-        double firstOperand = Double.parseDouble(symbols[0]);
-        double secondOperand = Double.parseDouble(symbols[2]);
+        int firstOperand = Integer.parseInt(symbols[0]);
+        int secondOperand = Integer.parseInt(symbols[2]);
         sign = symbols[1];
-        double result = 1;
+        int result = 1;
         switch (sign) {
             case "+":
                 return firstOperand + secondOperand;
@@ -48,13 +48,13 @@ public class Calculator {
             case "*":
                 return firstOperand * secondOperand;
             case "/":
-                return IEEEremainder(firstOperand, secondOperand);
+                return (double) firstOperand / (double) secondOperand;
             case "%":
-                return firstOperand % secondOperand;
+                return IEEEremainder(firstOperand, secondOperand);
             case "^":
                 return Math.pow(firstOperand, secondOperand);
             default:
-                System.out.println("Неправильный знак математической операции.");
+                System.out.println(Double.NaN);
                 break;
         }
         return result;
@@ -70,13 +70,15 @@ public class Calculator {
         }
     }
 
-    public void checkNan(String[] signs) {
-        System.out.println(Double.parseDouble(signs[0]));
+    public static void checkNan(String strNum) {
+        if (strNum == null) {
+            System.out.println("Пустая строка");;
+        }
+        try {
+            double d = Double.parseDouble(strNum);
+        } catch (NumberFormatException nfe) {
+            System.out.println(Double.NaN);
+        }
     }
 
-
-    public static double squareRootOfNegativeNumber() {
-        double number = -1.0;
-        return Math.sqrt(number);
-    }
 }

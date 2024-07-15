@@ -15,8 +15,8 @@ public class CalculatorTest {
                 System.out.println("Введите математическое выражение в формате a 'знак операции' b");
                 calculator.setMath(scanner.nextLine());
                 String[] symbols = calculator.getMath().split(" ", 0);
-                calculator.checkNan(symbols);
-                //System.out.println(calculator.squareRootOfNegativeNumber());
+                calculator.checkNan(symbols[0]);
+                calculator.checkNan(symbols[2]);
                 calculator.printArray(symbols);
                 double result = calculator.calculate(calculator.getMath());
                 DecimalFormat decimal = new DecimalFormat("#.###");
