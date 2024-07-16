@@ -1,4 +1,4 @@
-package com.startjava.lesson_4;
+package com.startjava.lesson_2_3_4.arrayTheme;
 
 import java.util.Arrays;
 
