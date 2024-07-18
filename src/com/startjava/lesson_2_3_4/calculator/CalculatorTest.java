@@ -1,7 +1,6 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 import java.text.DecimalFormat;
-
 import java.util.Scanner;
 
 public class CalculatorTest {
@@ -13,18 +12,13 @@ public class CalculatorTest {
         while (!inputAnswer.equals("no")) {
             if (inputAnswer.equals("yes")) {
                 System.out.println("Введите математическое выражение в формате a 'знак операции' b");
-                calculator.setMath(scanner.nextLine());
-                String[] symbols = calculator.getMath().split(" ", 0);
-                calculator.checkNan(symbols[0]);
-                calculator.checkNan(symbols[2]);
-                calculator.printArray(symbols);
-                double result = calculator.calculate(calculator.getMath());
+                double result = calculator.calculate();
                 DecimalFormat decimal = new DecimalFormat("#.###");
                 System.out.println(decimal.format(result));
             } else {
                 System.out.println("Введите корректный ответ - [yes / no]");
             }
-            System.out.println("\nВы желаете продолжить вычисления?[yes/no]: ");
+            System.out.println("Вы желаете продолжить вычисления?[yes/no]: ");
             inputAnswer = scanner.nextLine().toLowerCase();
         }
         System.out.println("Закончили работу.");

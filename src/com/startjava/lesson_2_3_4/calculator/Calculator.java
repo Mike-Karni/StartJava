@@ -1,7 +1,6 @@
 package com.startjava.lesson_2_3_4.calculator;
 
-import jdk.internal.math.FloatingDecimal;
-
+import java.util.Scanner;
 import static java.lang.Math.IEEEremainder;
 
 public class Calculator {
@@ -10,7 +9,7 @@ public class Calculator {
     private String sign;
     private int num2;
 
-    private String line;
+    private String expression;
 
     public int getNum1() {
         return num1;
@@ -30,34 +29,63 @@ public class Calculator {
         this.num2 = num2;
     }
 
-    public void setMath(String line) { this.line = line; }
+    public void setMath(String expression) { this.expression = expression; }
 
-    public String getMath() { return line; }
+    public String getMath() { return expression; }
 
-    public double calculate(String line) {
-        String[] symbols = line.split(" ", 0);
-        int firstOperand = Integer.parseInt(symbols[0]);
-        int secondOperand = Integer.parseInt(symbols[2]);
+    public double calculate() {
+        Scanner scanner = new Scanner(System.in);
+        setMath(scanner.nextLine());
+        String[] symbols = expression.split(" ");
+        int a = Integer.parseInt(symbols[0]);
+        int b = Integer.parseInt(symbols[2]);
         sign = symbols[1];
         int result = 1;
         switch (sign) {
             case "+":
-                return firstOperand + secondOperand;
+                printArray(symbols);
+                return a + b;
             case "-":
-                return firstOperand - secondOperand;
+                printArray(symbols);
+                return a - b;
             case "*":
-                return firstOperand * secondOperand;
+                printArray(symbols);
+                return a * b;
             case "/":
-                return (double) firstOperand / (double) secondOperand;
+                printArray(symbols);
+                return (double) a / (double) b;
             case "%":
-                return IEEEremainder(firstOperand, secondOperand);
+                printArray(symbols);
+                return IEEEremainder(a, b);
             case "^":
-                return Math.pow(firstOperand, secondOperand);
+                printArray(symbols);
+                return Math.pow(a, b);
             default:
-                System.out.println(Double.NaN);
-                break;
+                System.out.println("Неправильно введённое выражение для вычисления");
+                return Double.NaN;
         }
-        return result;
+//        switch (sign) {
+//            case "+":
+//                printArray(symbols);
+//                return Integer.parseInt(symbols[0]) + Integer.parseInt(symbols[2]);
+//            case "-":
+//                printArray(symbols);
+//                return Integer.parseInt(symbols[0]) - Integer.parseInt(symbols[2]);
+//            case "*":
+//                printArray(symbols);
+//                return Integer.parseInt(symbols[0]) * Integer.parseInt(symbols[2]);
+//            case "/":
+//                printArray(symbols);
+//                return (double) Integer.parseInt(symbols[0]) / (double) Integer.parseInt(symbols[2]);
+//            case "%":
+//                printArray(symbols);
+//                return IEEEremainder(Integer.parseInt(symbols[0]), Integer.parseInt(symbols[2]));
+//            case "^":
+//                printArray(symbols);
+//                return Math.pow(Integer.parseInt(symbols[0]), Integer.parseInt(symbols[2]));
+//            default:
+//                return Double.NaN;
+//        }
     }
 
     public void printArray(String[] symbols) {
@@ -68,17 +96,6 @@ public class Calculator {
                 System.out.print(symbols[i] + " = ");
             }
         }
+        calculate();
     }
-
-    public static void checkNan(String strNum) {
-        if (strNum == null) {
-            System.out.println("Пустая строка");;
-        }
-        try {
-            double d = Double.parseDouble(strNum);
-        } catch (NumberFormatException nfe) {
-            System.out.println(Double.NaN);
-        }
-    }
-
 }
