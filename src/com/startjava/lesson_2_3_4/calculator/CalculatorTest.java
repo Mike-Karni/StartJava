@@ -9,8 +9,12 @@ public class CalculatorTest {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Введите математическое выражение в формате a 'знак операции' b");
+            if (Double.isNaN(calculator.calculate())) {
+                System.out.println("Неправильно введённое выражение для вычисления");
+            }
             double result = calculator.calculate();
             DecimalFormat decimal = new DecimalFormat("#.###");
+
             System.out.println(decimal.format(result));
             System.out.println("Вы желаете продолжить вычисления?[yes/no]: ");
             String inputAnswer = scanner.nextLine().toLowerCase();
@@ -19,5 +23,18 @@ public class CalculatorTest {
             }
         }
         System.out.println("Закончили работу.");
+    }
+
+    public void printArray() {
+        Calculator.setExpression();
+        String[] symbols = Calculator.getExpression().split(" ");
+
+        for (int i = 0; i < symbols.length; i++) {
+            if (i < 2) {
+                System.out.print(symbols[i] + " ");
+            } else {
+                System.out.print(symbols[i] + " = ");
+            }
+        }
     }
 }

@@ -5,17 +5,19 @@ import static java.lang.Math.IEEEremainder;
 import java.util.Scanner;
 
 public class Calculator {
-    private String expression;
+    private static String expression;
 
-    public void setMath(String expression) {
-        this.expression = expression;
+    public void setExpression() {
+        Scanner scanner = new Scanner(System.in);
+        this.expression = scanner.nextLine();
     }
 
+    public String getExpression() {
+        return expression; }
+
     public double calculate() {
-        Scanner scanner = new Scanner(System.in);
-        setMath(scanner.nextLine());
+        setExpression();
         String[] symbols = expression.split(" ");
-        printArray(symbols);
         int a = Integer.parseInt(symbols[0]);
         int b = Integer.parseInt(symbols[2]);
         String sign = symbols[1];
@@ -59,15 +61,5 @@ public class Calculator {
             default:
                 return Double.NaN;
         } */
-    }
-
-    public void printArray(String[] symbols) {
-        for (int i = 0; i < symbols.length; i++) {
-            if (i < 2) {
-                System.out.print(symbols[i] + " ");
-            } else {
-                System.out.print(symbols[i] + " = ");
-            }
-        }
     }
 }
