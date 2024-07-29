@@ -1,11 +1,10 @@
 package com.startjava.lesson_2_3_4.calculator;
 
-import javax.sound.midi.Soundbank;
-
 import static java.lang.Math.IEEEremainder;
 
 import java.util.Scanner;
 
+@SuppressWarnings("checkstyle:RightCurly")
 public class Calculator {
     private static String expression;
 
@@ -27,24 +26,15 @@ public class Calculator {
         } catch (NumberFormatException e) {
             System.out.println("Неправильный ввод выражения.");
         }
-//        int a = Integer.parseInt(symbols[0]);
-//        int b = Integer.parseInt(symbols[2]);
         String sign = symbols[1];
-        switch (sign) {
-            case "+":
-                return (double) a + (double) b;
-            case "-":
-                return (double) a - (double) b;
-            case "*":
-                return (double) a * (double) b;
-            case "/":
-                return (double) a / (double) b;
-            case "%":
-                return IEEEremainder(a, b);
-            case "^":
-                return Math.pow(a, b);
-            default:
-                return Double.NaN;
-        }
+        return switch (sign) {
+            case "+" -> (double) a + (double) b;
+            case "-" -> (double) a - (double) b;
+            case "*" -> (double) a * (double) b;
+            case "/" -> (double) a / (double) b;
+            case "%" -> IEEEremainder(a, b);
+            case "^" -> Math.pow(a, b);
+            default -> Double.NaN;
+        };
     }
 }
