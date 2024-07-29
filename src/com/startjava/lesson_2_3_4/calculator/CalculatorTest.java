@@ -9,14 +9,16 @@ public class CalculatorTest {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Введите математическое выражение в формате a 'знак операции' b");
-            if (Double.isNaN(calculator.calculate())) {
-                System.out.println("Неправильно введённое выражение для вычисления");
-            }
+            Calculator.setExpression();
             double result = calculator.calculate();
-            DecimalFormat decimal = new DecimalFormat("#.###");
-
-            System.out.println(decimal.format(result));
-            System.out.println("Вы желаете продолжить вычисления?[yes/no]: ");
+            if (Double.isNaN(result)) {
+                System.out.println("Неверный ввод выражения");
+            } else {
+                printArray(Calculator.getExpression());
+                DecimalFormat decimal = new DecimalFormat("#.###");
+                System.out.println(decimal.format(result));
+            }
+            System.out.println("\nВы желаете продолжить вычисления?[yes/no]: ");
             String inputAnswer = scanner.nextLine().toLowerCase();
             if (inputAnswer.equals("no")) {
                 break;
@@ -25,10 +27,8 @@ public class CalculatorTest {
         System.out.println("Закончили работу.");
     }
 
-    public void printArray() {
-        Calculator.setExpression();
-        String[] symbols = Calculator.getExpression().split(" ");
-
+    public static void printArray(String expression) {
+        String[] symbols = expression.split(" ");
         for (int i = 0; i < symbols.length; i++) {
             if (i < 2) {
                 System.out.print(symbols[i] + " ");
