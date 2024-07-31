@@ -7,34 +7,25 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
-        while (true) {
+        String inputAnswer = "";
+        while (!inputAnswer.equals("no")) {
             System.out.println("Введите математическое выражение в формате a 'знак операции' b");
-            Calculator.setExpression();
-            double result = calculator.calculate();
+            String expression = scanner.nextLine();
+            double result = calculator.calculate(expression);
             if (Double.isNaN(result)) {
-                System.out.println("Неверный ввод выражения");
+                continue;
             } else {
-                printArray(Calculator.getExpression());
-                DecimalFormat decimal = new DecimalFormat("#.###");
-                System.out.println(decimal.format(result));
+                printResult(expression, result);
             }
             System.out.println("\nВы желаете продолжить вычисления?[yes/no]: ");
-            String inputAnswer = scanner.nextLine().toLowerCase();
-            if (inputAnswer.equals("no")) {
-                break;
-            }
+            inputAnswer = scanner.nextLine().toLowerCase();
         }
         System.out.println("Закончили работу.");
     }
 
-    public static void printArray(String expression) {
-        String[] symbols = expression.split(" ");
-        for (int i = 0; i < symbols.length; i++) {
-            if (i < 2) {
-                System.out.print(symbols[i] + " ");
-            } else {
-                System.out.print(symbols[i] + " = ");
-            }
-        }
+    public static void printResult(String expression, double result) {
+        System.out.print(expression + " = ");
+        DecimalFormat decimal = new DecimalFormat("#.###");
+        System.out.println(decimal.format(result));
     }
 }
