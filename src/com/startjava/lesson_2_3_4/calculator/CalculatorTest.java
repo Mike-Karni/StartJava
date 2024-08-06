@@ -9,7 +9,7 @@ public class CalculatorTest {
         Scanner scanner = new Scanner(System.in);
         String inputAnswer = "";
         while (!inputAnswer.equals("no")) {
-            System.out.println("Введите математическое выражение в формате a 'знак операции' b");
+            System.out.println("Введите математическое выражение в формате '2 ^ 10'. ");
             String expression = scanner.nextLine();
             double result = calculator.calculate(expression);
             if (Double.isNaN(result)) {
@@ -19,13 +19,15 @@ public class CalculatorTest {
             }
             System.out.println("\nВы желаете продолжить вычисления?[yes/no]: ");
             inputAnswer = scanner.nextLine().toLowerCase();
+            if (!inputAnswer.equals("yes") & !inputAnswer.equals("no")) {
+                System.out.println("Введите корректный ответ [yes / no]");
+            }
         }
         System.out.println("Закончили работу.");
     }
 
     public static void printResult(String expression, double result) {
-        System.out.print(expression + " = ");
-        DecimalFormat decimal = new DecimalFormat("#.###");
-        System.out.println(decimal.format(result));
+        DecimalFormat df = new DecimalFormat("#.###");
+        System.out.print(expression + " = " + df.format(result));
     }
 }
