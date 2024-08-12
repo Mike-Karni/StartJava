@@ -5,18 +5,16 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
         String inputAnswer = "";
         while (!inputAnswer.equals("no")) {
             System.out.println("Введите математическое выражение в формате '2 ^ 10'. ");
             String expression = scanner.nextLine();
-            double result = calculator.calculate(expression);
+            double result = Calculator.calculate(expression);
             if (Double.isNaN(result)) {
                 continue;
-            } else {
-                printResult(expression, result);
             }
+            printResult(result, expression);
             System.out.println("\nВы желаете продолжить вычисления?[yes/no]: ");
             inputAnswer = scanner.nextLine().toLowerCase();
             if (!inputAnswer.equals("yes") & !inputAnswer.equals("no")) {
@@ -26,8 +24,10 @@ public class CalculatorTest {
         System.out.println("Закончили работу.");
     }
 
-    public static void printResult(String expression, double result) {
+    public static void printResult(double result, String expression) {
         DecimalFormat df = new DecimalFormat("#.###");
-        System.out.print(expression + " = " + df.format(result));
+        if (Double.isNaN(result)) {
+            System.out.print(expression + " = " + df.format(result));
+        }
     }
 }
