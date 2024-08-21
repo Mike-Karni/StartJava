@@ -1,27 +1,35 @@
 package com.startjava.lesson_2_3_4.calculator;
 
+import static java.lang.Double.NaN;
 import static java.lang.Math.IEEEremainder;
 
 public class Calculator {
-    public static double calculate(String expression) {
+    public double calculate(String expression) {
         String[] elements = expression.split(" ");
-        double result = 0;
-        try {
-            int a = Integer.parseInt(elements[0]);
-            int b = Integer.parseInt(elements[2]);
-            String sign = elements[1];
-            result = switch (sign) {
-                case "+" -> a + b;
-                case "-" -> a - b;
-                case "*" -> a * b;
-                case "/" -> (double) a / b;
-                case "%" -> IEEEremainder(a, b);
-                case "^" -> Math.pow(a, b);
-                default -> Double.NaN;
-            };
-        } catch (NumberFormatException e) {
-            System.out.println("Вычисление невозможно, вы ввели не числа.");
+        //int a = Integer.parseInt(elements[0]);
+        //int b = Integer.parseInt(elements[2]);
+        double a = toInt(elements[0], NaN);
+        double b = toInt(elements[2], NaN);
+        String sign = elements[1];
+        return switch (sign) {
+            case "+" -> a + b;
+            case "-" -> a - b;
+            case "*" -> a * b;
+            case "/" -> a / b;
+            case "%" -> IEEEremainder(a, b);
+            case "^" -> Math.pow(a, b);
+            default -> Double.NaN;
+        };
+    }
+
+    public double toInt(String str, double defaultValue) {
+        if (str == null) {
+            return defaultValue;
         }
-        return result;
+        try {
+            return Integer.parseInt(str);
+        } catch (NumberFormatException nfe) {
+            return defaultValue;
+        }
     }
 }
