@@ -6,8 +6,6 @@ import static java.lang.Math.IEEEremainder;
 public class Calculator {
     public double calculate(String expression) {
         String[] elements = expression.split(" ");
-        //int a = Integer.parseInt(elements[0]);
-        //int b = Integer.parseInt(elements[2]);
         double a = toInt(elements[0], NaN);
         double b = toInt(elements[2], NaN);
         String sign = elements[1];
