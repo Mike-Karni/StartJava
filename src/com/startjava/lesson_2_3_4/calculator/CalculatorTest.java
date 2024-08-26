@@ -7,23 +7,17 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         Scanner scanner = new Scanner(System.in);
-        String inputAnswer = "";
-        while (!inputAnswer.equals("no")) {
-            System.out.println("Введите математическое выражение в формате '2 ^ 10'. ");
-            String expression = scanner.nextLine();
-            double result = calculator.calculate(expression);
-            if (Double.isNaN(result)) {
-                continue;
+        String inputAnswer = "yes";
+        do {
+            if ("yes".equals(inputAnswer)) {
+                System.out.println("Введите математическое выражение в формате '2 ^ 10'. ");
+                String expression = scanner.nextLine();
+                double result = calculator.calculate(expression);
+                printResult(result, expression);
             }
-            printResult(result, expression);
             System.out.println("\nВы желаете продолжить вычисления?[yes/no]: ");
-            while (!inputAnswer.equals("yes") & !inputAnswer.equals("no")) {
-                inputAnswer = scanner.nextLine().toLowerCase();
-                if (!inputAnswer.equals("yes") & !inputAnswer.equals("no")) {
-                    System.out.println("Введите корректный ответ [yes / no]");
-                }
-            }
-        }
+            inputAnswer = scanner.nextLine().toLowerCase();
+        } while (!"no".equals(inputAnswer));
         System.out.println("Закончили работу.");
     }
 
