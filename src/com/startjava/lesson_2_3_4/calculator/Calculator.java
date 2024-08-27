@@ -6,7 +6,7 @@ public class Calculator {
         double a = toInt(elements[0]);
         double b = toInt(elements[2]);
         if (Double.isNaN(a) || Double.isNaN(b)) {
-            System.out.println("NaN");
+            return Double.NaN;
         }
         String sign = elements[1];
         return switch (sign) {
